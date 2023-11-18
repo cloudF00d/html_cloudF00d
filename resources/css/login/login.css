@@ -1,153 +1,149 @@
-.e208_2653 { 
-	overflow:hidden;
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-.e208_2653 { 
-	width:1920px;
-	height:129px;
-	position:absolute;
+
+a:link, a:visited{
+	text-decoration: none;
 }
-.e208_2652 { 
-	width:1920px;
-	height:129px;
-	position:absolute;
-	left:0px;
-	top:0px;
+
+li{
+	list-style: none;
 }
-.e85_3133 { 
-	background-color:rgba(243.00000071525574, 125.00000014901161, 29.000000171363354, 1);
-	width:175px;
-	height:48px;
-	position:absolute;
-	left:1666px;
-	top:40px;
-	border-top-left-radius:10px;
-	border-top-right-radius:10px;
-	border-bottom-left-radius:10px;
-	border-bottom-right-radius:10px;
+header{
+	background-color: aqua;
+	height: 200px;
+	width: 100%;
 }
-.e85_2402 { 
-	background-color:rgba(51.00000075995922, 51.00000075995922, 51.00000075995922, 1);
-	width:1920px;
-	height:129px;
-	position:absolute;
-	left:0px;
-	top:0px;
+
+footer{
+	background-color: aqua;
+	height: 200px;
+	width: 100%;
+	position: absolute;
+	
 }
-.e85_2403 { 
-	width:170px;
-	height:104px;
-	position:absolute;
-	left:46px;
-	top:12px;
-	background-image:url(images/textlogonone_2.png);
-	background-repeat:no-repeat;
-	background-size:cover;
+#wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
 }
-.e85_2404 { 
-	color:rgba(255, 255, 255, 1);
-	width:39px;
-	height:25px;
-	position:absolute;
-	left:441px;
-	top:52px;
-	font-family:Inter;
-	text-align:left;
-	font-size:21px;
-	letter-spacing:0;
+#login {
+    width: 500px; /* Adjust the width as needed */
+    height: 800px;
+    text-align: center; /* Align text content to the center */
+    border: 1px solid red;
 }
-.e85_2407 { 
-	color:rgba(255, 255, 255, 1);
-	width:58px;
-	height:25px;
-	position:absolute;
-	left:548px;
-	top:52px;
-	font-family:Inter;
-	text-align:left;
-	font-size:21px;
-	letter-spacing:0;
+.signin_text{
+    font-size: 40px; 
 }
-.e85_2411 { 
-	color:rgba(255, 255, 255, 1);
-	width:97px;
-	height:25px;
-	position:absolute;
-	left:1338px;
-	top:52px;
-	font-family:Inter;
-	text-align:left;
-	font-size:21px;
-	letter-spacing:0;
+.signin li{
+    padding: 15px;
 }
-.e85_2408 { 
-	color:rgba(255, 255, 255, 1);
-	width:58px;
-	height:25px;
-	position:absolute;
-	left:674px;
-	top:52px;
-	font-family:Inter;
-	text-align:left;
-	font-size:21px;
-	letter-spacing:0;
+
+
+.user_id input[type='text']{
+    border: 1px solid #ccc; /* 테두리 설정 */
+    border-radius: 5px; /* 모서리를 둥글게 설정 */
+    width: 350px; /* 너비 조정 */
+    height: 50px; /* 높이 조정 */
 }
-.e85_2405 { 
-	color:rgba(255, 255, 255, 1);
-	width:20px;
-	height:25px;
-	position:absolute;
-	left:353px;
-	top:52px;
-	font-family:Inter;
-	text-align:left;
-	font-size:21px;
-	letter-spacing:0;
+
+.signin input[type='password']{
+    border: 1px solid #ccc; /* 테두리 설정 */
+    border-radius: 5px; /* 모서리를 둥글게 설정 */
+    width: 350px; /* 너비 조정 */
+    height: 50px; /* 높이 조정 */
+
+    margin-left: 6px;
+
+
 }
-.e85_2412 { 
-	color:rgba(255, 255, 255, 1);
-	width:78px;
-	height:25px;
-	position:absolute;
-	left:1516px;
-	top:52px;
-	font-family:Inter;
-	text-align:left;
-	font-size:21px;
-	letter-spacing:0;
+
+.btlogin button {
+    /* 버튼의 높이와 너비를 조정하여 크게 만듭니다. */
+    width: 350px;
+    height: 50px;
+
+    /* 배경색을 주황색으로 설정합니다. */
+    background-color: orange;
+
+    /* 글자 색을 변경합니다. */
+    color: white;
+
+    /* 글자 크기를 크게 설정합니다. */
+    font-size: 18px;
+
+    /* 모서리를 둥글게 만듭니다. */
+    border-radius: 25px;
+
+    /* 테두리를 없앱니다. */
+    border: none;
+
+    /* 버튼 안의 텍스트를 가운데 정렬합니다. */
+    text-align: center;
+
+    /* 버튼 안의 텍스트의 여백을 조정합니다. */
+    padding: 10px 20px;
+
+    /* 마우스 호버 시 색상 변경 효과를 추가합니다. */
+    transition: background-color 0.5s ease;
 }
-.e85_3807 { 
-	background-color:rgba(185.00000417232513, 185.00000417232513, 185.00000417232513, 1);
-	width:329px;
-	height:48px;
-	position:absolute;
-	left:884px;
-	top:40px;
-	border-top-left-radius:10px;
-	border-top-right-radius:10px;
-	border-bottom-left-radius:10px;
-	border-bottom-right-radius:10px;
+
+.btlogin button:hover {
+    /* 마우스 호버 시 배경색 변경 */
+    background-color: darkorange;
 }
-.e208_2648 { 
-	background-color:rgba(243.00000071525574, 125.00000014901161, 29.000000171363354, 1);
-	width:175px;
-	height:48px;
-	position:absolute;
-	left:1667px;
-	top:40px;
-	border-top-left-radius:10px;
-	border-top-right-radius:10px;
-	border-bottom-left-radius:10px;
-	border-bottom-right-radius:10px;
+
+.findid {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    
 }
-.e85_3575 { 
-	color:rgba(255, 255, 255, 1);
-	width:140px;
-	height:25px;
-	position:absolute;
-	left:1684px;
-	top:52px;
-	font-family:Inter;
-	text-align:left;
-	font-size:21px;
-	letter-spacing:0;
+.downpart ul,li{
+    padding: 10px;
+}
+
+.btjoin button {
+    /* 버튼의 높이와 너비를 조정하여 크게 만듭니다. */
+    width: 350px;
+    height: 50px;
+
+    /* 배경색을 주황색으로 설정합니다. */
+    background-color: orange;
+
+    /* 글자 색을 변경합니다. */
+    color: white;
+
+    /* 글자 크기를 크게 설정합니다. */
+    font-size: 18px;
+
+    /* 모서리를 둥글게 만듭니다. */
+    border-radius: 25px;
+
+    /* 테두리를 없앱니다. */
+    border: none;
+
+    /* 버튼 안의 텍스트를 가운데 정렬합니다. */
+    text-align: center;
+
+    /* 버튼 안의 텍스트의 여백을 조정합니다. */
+    padding: 10px 20px;
+
+    /* 마우스 호버 시 색상 변경 효과를 추가합니다. */
+    transition: background-color 0.5s ease;
+}
+
+.btjoin button:hover {
+    /* 마우스 호버 시 배경색 변경 */
+    background-color: darkorange;
+}
+
+
+#logo1 {
+    width: 300px; /* 원하는 너비로 설정하세요. */
+    height: auto; /* 높이는 자동으로 조정됩니다. */
 }
