@@ -1,0 +1,137 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a:link, a:visited{
+	text-decoration: none;
+}
+
+li{
+	list-style: none;
+}
+header{
+	background-color: aqua;
+	height: 200px;
+	width: 100%;
+}
+footer{
+	background-color: aqua;
+	height: 200px;
+	width: 100%;
+	position: absolute;
+	
+}
+.logo1 {
+    width: 140px; /* 원하는 너비로 설정하세요. */
+    height: auto; /* 높이는 자동으로 조정됩니다. */
+    margin-top: 40px;
+}
+.black-link,
+.black-link:visited {
+    color: black;
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.iconlogo {
+    position: relative;
+    top: 6px; /* 아이콘을 아래로 5px 이동 */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.pagination-box {
+    display: flex;
+    align-items: center;
+}
+
+.page-links {
+    display: flex;
+    margin: 0 10px;
+}
+
+.page-link, .prev, .next {
+    padding: 5px 10px;
+    background: rgb(240, 240, 240);
+    margin: 0 3px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 7px; /* 모서리를 둥글게 만듦 */
+}
+
+.page-link:hover, .prev:hover, .next:hover {
+    background-color: darkorange;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse; /* 테이블 셀 경계를 합침 */
+    width: 100%; /* 테이블이 부모 요소에 가득 차도록 함 */
+    border-spacing: 10px;
+}
+
+th, td {
+    border-top: 1px solid #ddd; /* 상단에만 회색 선 추가 */
+    border-bottom: 1px solid #ddd; /* 하단에만 회색 선 추가 */
+    padding: 20px; /* 셀 안의 여백 설정 */
+    text-align: left; /* 셀 안의 텍스트를 왼쪽 정렬 */
+}
+
+th {
+    /* background-color: #f2f2f2; 헤더 셀에 연한 회색 배경색 추가 */
+    border-top: none; /* 헤더 셀의 상단 선 제거 */
+    border-bottom: 1px solid #ddd; /* 헤더 셀의 하단에만 회색 선 추가 */
+}
+
+td a{
+    color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* 컨테이너 내부 요소들을 좌측과 우측에 배치 */
+    width: 100%;
+    
+    margin: 0 auto; /* 화면 가운데 정렬 */
+}
+
+.left {
+    flex-basis: 30%; /* 왼쪽 영역의 너비를 30%로 설정 */
+}
+
+.middle {
+    flex-basis: 50%; /* 가운데 영역의 너비를 50%로 설정 */
+}
+
+.right {
+    flex-basis: 20%; /* 오른쪽 영역의 너비를 20%로 설정 */
+}
+
+.searchcontainer {
+    display: flex;
+    justify-content: space-between; /* 좌우에 요소를 배치 */
+    width: 100%;
+    margin-top: 40px;
+}
+
+.searchright {
+     /* 우측 영역의 너비를 30%로 설정 */
+    display: flex; /* 내부 요소들을 가로로 배치 */
+    justify-content: flex-end; /* 내부 요소를 오른쪽으로 정렬 */
+    align-items: center; /* 내부 요소를 세로 방향 가운데 정렬 */
+    margin-left: auto; /* 오른쪽으로 이동시킴 */
+}
+
+.first{
+    font-size: 25px;
+    font-weight: 1000;
+    margin-top: 40px;
+}
