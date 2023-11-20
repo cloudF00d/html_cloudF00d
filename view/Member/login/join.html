@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join</title>
+    <link rel="stylesheet" href="/resources/css/login/join.css">
+</head>
+<body>
+    <header></header>
+
+    <div class="container">
+        <div class="left">
+            <div>
+            <div class="jointitle">회원가입</div>
+            <div>
+                <span>이미 계정이 있으신가요?</span> 
+                <span><a href="#">로그인하기</a></span>
+            </div>
+
+            
+            <div class="joininfo">
+            <div>
+                    <li><span>이름</span><span class="movetext1">성</span></li>
+                    <li><span><input type="text"></span>&nbsp;&nbsp;<span><input type="text"></span></li>
+                </div>
+
+                <div>
+                    <li>이메일 주소</li>
+                    <span><input type="text"></span>&nbsp;&nbsp;<span><button type="submit">인증번호 받기</button></span>
+                </div>
+
+                <div>
+                    <form action="/submit-form">
+                        <li><span>비밀번호</span><span class="movetext2">비밀번호 확인</span></li>
+                        <li><span><input type="password" id="passwordField" name="passwordField"></span>&nbsp;&nbsp;<span><input type="password" id="confirmPasswordField" name="confirmPasswordField"></span></li>
+                        
+                        
+                        
+                        
+                        <input type="checkbox" id="showPassword" onchange="togglePassword()">
+                        <label for="showPassword">비밀번호 보이기</label>
+                        
+                        
+                    </form>
+                </div>
+
+                <div>
+                    <li>주소</li>
+                    <li><input type="text"></li>
+                </div>
+                <div>
+                    <li>상세주소</li>
+                    <li><input type="text"></li>
+                </div>
+            </div>
+        
+            <div class="joinbtn"><a href="http://www.google.com"><button>회원가입</button></a></div>
+
+
+        </div>
+    </div>
+
+        <div class="right">
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <footer></footer>
+</body>
+</html>
