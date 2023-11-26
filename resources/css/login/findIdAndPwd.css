@@ -39,6 +39,8 @@ li{
 }
 .movetext2{
     padding-bottom: 30px;
+    position: relative;
+    left: 100px
 }
 
 .box1{
@@ -57,10 +59,14 @@ li{
     
 }
 
-
-
+form{
+    padding-bottom: 100px;
+}
 
 .joinbtn button {
+    
+    position: relative;
+    left: 300px;    
    /* 버튼의 높이와 너비를 조정하여 크게 만듭니다. */
    width: 350px;
    height: 50px;
@@ -153,13 +159,56 @@ footer{
 
 .findid {
     display: flex;
-    justify-content: space-evenly;
     padding: 0;
+    position: relative;
+    left: 210px;
+
        
 }
+.findid a{
+    margin: 50px;
+}
+
+
 .arrow{
     width: 25px;
     position: relative;
 
     top: 7px;
 }
+.center{
+    
+    
+    
+    justify-content: center;
+
+    height: 1000px;
+    width: 1000px;
+}
+
+.moveall{
+    position: relative;
+
+    left: 300px;
+}
+
+.down{
+    
+    padding-top: 20px;
+    border-top: 1px solid grey;
+}
+
+.down span{
+    position: relative;
+    left: 170px;
+    margin: 30px;
+}
+.movetext1{
+    position: relative;
+    right: 148px;
+}
+.movetext2{
+    position: relative;
+    right: 120px;
+}
+
