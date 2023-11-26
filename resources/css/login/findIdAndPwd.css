@@ -14,66 +14,39 @@ li{
 	list-style: none;
 }
 
-header{
-	background-color: aqua;
-	height: 200px;
-	width: 100%;
-}
-
-footer{
-	background-color: aqua;
-	height: 200px;
-	width: 100%;
-	position: absolute;
-	
-}
-
 
 
 
 .container {
     display: flex;
-    justify-content: space-between; /* 컨테이너 내부 요소들을 좌측과 우측에 배치 */
+    justify-content: center; /* 컨테이너 내부 요소들을 좌측과 우측에 배치 */
     width: 1920px;
     
     
     margin: 0 auto; /* 화면 가운데 정렬 */
 }
 
-.left {
-    flex-basis: 960px; /* 왼쪽 영역의 너비를 30%로 설정 */
-    
-}
-
-.right {
-    flex-basis: 960px; /* 오른쪽 영역의 너비를 20%로 설정 */
-    
-}
 
 
 
-.left{
-    display: flex;
-    justify-content: center;
-    
-    /* 화면 높이에 맞게 조정 */
-}
-
-.jointitle{
-    font-size: 30px;
-    font-weight: 600;
-    padding: 40px 0;
-}
-
-.joininfo div{
+.joininfo div {
     padding: 20px 0;
     
 }
+
+.movebox{
+    padding:7px;
+}
+.movetext2{
+    padding-bottom: 30px;
+}
+
 .box1{
     border-radius: 9px;
     width: 360px;
     height: 35px;
     border: 1px solid rgb(184, 184, 184);
+    
 }
 
 .box2{
@@ -83,28 +56,9 @@ footer{
     border: 1px solid rgb(184, 184, 184);
     
 }
-.box3{
-    border-radius: 9px;
-    width: 175px;
-    height: 35px;
-    border: 1px solid rgb(184, 184, 184);
-}
 
-.box4{
-    border-radius: 9px;
-    width: 360px;
-    height: 60px;
-    border: 1px solid rgb(184, 184, 184);
-    
-}
 
-.movetext1{
-    margin-left: 150px;
-}
 
-.movetext2{
-    margin-left: 123px;
-}
 
 .joinbtn button {
    /* 버튼의 높이와 너비를 조정하여 크게 만듭니다. */
@@ -175,39 +129,37 @@ footer{
 }
 
 
-
-
-/* 오른쪽 시작========================================*/
-
-.kinglogo{
-    width: 400px;
-    height: auto;
-
+header{
+	background-color: aqua;
+	height: 200px;
+	width: 100%;
 }
 
-.detailLeft{
-    margin-left: 500px;
+footer{
+	background-color: aqua;
+	height: 200px;
+	width: 100%;
+	position: absolute;
+	
 }
 
-.detailRight{
-    margin-top: 220px;
-    margin-left: 100px;
-}
-
-
-.gologin a{
-    margin-left: 30px;
-    color: black ;
-    font-weight: bold;
+#logo1 {
+    width: 300px; /* 원하는 너비로 설정하세요. */
+    height: auto; /* 높이는 자동으로 조정됩니다. */
+    padding: 30px;
+    margin-left: 25px;
 }
 
 
+.findid {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+       
+}
+.arrow{
+    width: 25px;
+    position: relative;
 
-/* 헤더부분 */
-
-
-
-
-
-/* 푸터 */
-
+    top: 7px;
+}
