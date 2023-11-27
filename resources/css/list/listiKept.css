@@ -584,9 +584,12 @@ body {
     cursor: pointer;
     /* background-color: transparent; */
     border: none;
-    bageckground-image: url('/3조장바구니/trashicon.png');
+    /* bageckground-image: url('/3조장바구니/trashicon.png'); */
     background-size: cover;
     /* margin-left: auto; */
+}
+.gopay{
+
 }
 .price{
 	width: 100px;
@@ -649,7 +652,7 @@ body {
 	display: flex;
     justify-content: center;
     align-items: center;
-	margin-top: 100px;
+	margin-top: 50px;
 }
 .paybtn{
 	border: 1px solid orange;
