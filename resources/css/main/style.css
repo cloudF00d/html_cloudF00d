@@ -1,0 +1,563 @@
+/* body - 배경화면 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* logo - margin */
+.logo-image {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* 헤더 메뉴 부모 요소 */
+nav {
+    text-align: center;
+    min-width: 60px;
+    min-height: 20px;
+}
+
+/* 헤더 메뉴 목록 */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav.ul.hidden {
+    display: none;
+}
+
+/* 헤더 메뉴 항목 스타일 */
+nav ul li {
+    margin: 0 15px;
+    min-width: 80px;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* 헤더 메뉴 하이퍼링크 스타일 */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* 검색어 - 부모 */
+.search-box {
+    background-color: #eee;
+    padding: 3px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    min-width: 190px;
+    min-height: 20px;
+}
+
+/* 검색어 - 자식 (입력 필드) */
+.search-box input {
+    padding: 5px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    margin-right: auto;
+}
+
+/* 돋보기 */
+.search-box img {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* 프로젝트 생성 */
+.project-button {
+    background-color: #f90;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 40px;
+    margin-left: auto;
+    display: flex;
+    min-width: 120px;
+    min-height: 20px;
+}
+
+/* 프로젝트 생성 버튼 디자인 */
+.project-button a {
+    background-color: #f90;
+    color: #fff;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 더보기 토글 */
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: 22px;
+    z-index: 3;
+    min-width: 60px;
+    min-height: 20px;
+}
+
+.toggle-label {
+    cursor: pointer;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    z-index: 1;
+    padding: 50px;
+    left: 0;
+    right: 0;
+    top: 100%;
+    width: 100%;
+}
+
+.menu-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-content ul li {
+    margin: 10px;
+}
+
+.menu-content a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+/* SECTION */
+section {
+    section {
+        width: 100%;
+        height: 100vh;
+        /* 뷰포트 높이를 100%로 설정 */
+        background: #fff;
+    }
+}
+
+/* ARTICLE */
+article {
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+/* SLIDER 부모 */
+.slider-container {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 430px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.7s ease;
+    max-height: 100%;
+}
+
+.slider img {
+    object-fit: cover;
+    width: 100vw;
+    max-height: 100%;
+}
+
+/* SLIDER BUTTONS */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    background-color: rgba(240, 240, 240, 0.5);
+    border-radius: 20%;
+}
+
+.prev {
+    left: 5%;
+}
+
+.next {
+    right: 5%;
+}
+
+/* 중간 이모티콘 아이콘 메뉴 */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    position: auto;
+    max-width: 100%;
+    flex-direction: row;
+}
+
+article {
+    margin: 0 10px;
+    align-items: center;
+}
+
+.a1,
+.a2 {
+    flex: 1;
+    margin: 0 auto;
+}
+
+/* 이모티콘 아이콘 섹션 스타일 */
+.icon-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+/* 이모티콘 아이콘의 스타일 */
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 300px;
+    width: 100%;
+}
+
+/* 이모티콘 아이콘 각 행의 스타일 */
+.icon-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    margin-top: 3%;
+}
+
+/* 이모티콘 아이콘 부모 컨테이너 스타일 */
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* 이모티콘 아이콘 스타일 */
+.icon-row i {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 24px;
+}
+
+/* 아이콘에 호버 효과 */
+.icon-row i:hover {
+    color: rgb(255, 128, 0);
+}
+
+/* 랭킹 전체 스타일 */
+.ranking-column {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 13%;
+    /* margin-left: 70px; */
+}
+
+/* 랭킹 제목 */
+.ranking {
+    color: #000000;
+    width: 150px;
+    height: 50px;
+}
+
+/* 랭킹 제목 세부 */
+.ranking p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    width: 200px;
+    margin-left: -30px;
+    margin-top: 15vh;
+}
+
+.ranking li {
+    font-size: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ranking ul .text {
+    display: block;
+    width: 150px;
+    font-size: medium;
+}
+
+.ranking ul .rank {
+    margin-top: 25px;
+    margin-right: 10px;
+    width: 40px;
+}
+
+.ranking ul span {
+    justify-content: center;
+}
+
+/* 랭킹 리스트 */
+.ranking ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 200px;
+    text-align: left;
+    font-size: 20px;
+    justify-content: center;
+    margin-left: -10%
+}
+
+.ranking-ul-group {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    width: 260px;
+}
+
+.ranking img {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 15%;
+    margin-left: -10%;
+}
+
+/* 푸터 */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    width: 100%;
+    height: 198px;
+    position: absolute;
+}
+
+.footer-back {
+    background-color: rgb(233, 233, 233);
+    width: 100%;
+    height: 230px;
+    position: absolute;
+    margin-left: 0;
+    top: 0px;
+}
+
+.footer-left {
+    transform: rotate(6.141813577836304e-22deg);
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.footer-group {
+    height: 163px;
+    position: absolute;
+    left: 500px;
+}
+
+.footer-group-design {
+    width: 100;
+    height: 163px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.footer-down {
+    color: rgba(185.00000417232513, 185.00000417232513, 185.00000417232513, 1);
+    width: 500px;
+    height: 30px;
+    position: absolute;
+    top: 130px;
+    font-family: Poppins;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: -1;
+}
+
+.footer-up {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    left: 0px;
+    top: 10px;
+
+}
+
+.footer-up-right {
+    color: rgba(185.00000417232513, 185.00000417232513, 185.00000417232513, 1);
+    width: 300px;
+    height: 30px;
+    position: absolute;
+    left: 300px;
+    top: 50px;
+    font-family: Poppins;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: -1;
+    margin-left: 30px;
+}
+
+.footer-up-left {
+    color: rgba(185.00000417232513, 185.00000417232513, 185.00000417232513, 1);
+    width: 300px;
+    height: 30px;
+    position: absolute;
+    top: 50px;
+    font-family: Poppins;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: -1;
+}
+
+.footer-logo {
+    width: 150px;
+    height: 150px;
+    margin-top: 15px;
+    z-index: 1;
+    margin-left: 20vh;
+}
+
+/* 첫 번째 정사각형 아이콘 */
+.first-container {
+    padding-top: 10%;
+}
+
+.first-container-title {
+    margin-left: 7%;
+    margin-bottom: 3%
+}
+
+.first-square-icon-container {
+    display: flex;
+    margin-left: 5%;
+}
+
+.first-square-icon-wrapper {
+    text-align: center;
+    width: 14vw;
+    height: 12vw;
+    padding: 1vw;
+    transition: all 0.3s ease;
+    object-fit: cover;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10vh;
+    cursor: pointer;
+}
+
+.first-square-icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+}
+
+
+/* 두 번째 정사각형 아이콘 */
+.second-container {
+    margin-bottom: 10%;
+    padding-top: 7%;
+}
+
+.second-container-title {
+    margin-left: 7%;
+    margin-bottom: 3%
+}
+
+.second-square-icon-container {
+    display: flex;
+    margin-left: 5%;
+}
+
+.second-square-icon-wrapper {
+    text-align: center;
+    width: 20vw;
+    height: 15vw;
+    padding: 1vw;
+    transition: all 0.3s ease;
+    object-fit: cover;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15vh;
+    cursor: pointer;
+}
+
+.second-square-icon {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5px;
+    border-radius: 5%;
+}
+
+/* flex로 좌우 배치 */
+.display-flex {
+    display: inline-flex;
+}
+
+.display-flex>div {
+    flex: 2;
+    /* 첫 번째 아이템 */
+}
+
+.display-flex>div:nth-child(2) {
+    flex: 2;
+    /* 두 번째 아이템 */
+}
