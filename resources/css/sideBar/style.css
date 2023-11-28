@@ -29,6 +29,11 @@
     color: #555;
 }
 
+.sideBar-menu a:hover {
+    color: #000;
+    font-weight: bold;
+}
+
 .sideBar-toggle li {
     margin-left: 0px;
 }
