@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>main</title>
+    <style>
+        /* body - 배경화면 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        /* logo - margin */
+        .logo-image {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        /* 네비게이션 메뉴 부모 요소 */
+        nav {
+            text-align: center;
+            min-width: 60px;
+            min-height: 20px;
+        }
+
+        /* 네비게이션 메뉴 목록 */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        /* 작은 화면에서 메뉴 항목 숨김 */
+        @media screen and (max-width: 910px) {
+            nav ul {
+                display: none;
+                opacity: 1;
+                /* 초기 투명도 설정 */
+                transition: opacity 0.5s ease;
+                /* 트랜지션 설정 */
+            }
+
+
+            /* 메뉴 숨김 상태 설정 */
+            nav.ul.hidden {
+                opacity: 0;
+                pointer-events: none;
+                /* 이벤트 비활성화 */
+            }
+        }
+
+        /* JavaScript에서 메뉴 숨김 상태 추가 및 제거할 때 사용할 클래스 */
+        nav.ul.hidden {
+            display: none;
+        }
+
+
+        /* 네비게이션 메뉴 항목 스타일 */
+        nav ul li {
+            margin: 0 15px;
+            min-width: 80px;
+            min-height: 20px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 네비게이션 메뉴 하이퍼링크 스타일 */
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            height: 100%;
+            box-sizing: border-box;
+            /* 정확한 패딩값을 주기 위함 */
+        }
+
+        /* 검색어 - 부모 */
+        .search-box {
+            background-color: #eee;
+            padding: 3px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            /* width: 200px; */
+            margin-right: auto;
+            min-width: 180px;
+            min-height: 20px;
+        }
+
+        /* 검색어 - 자식 (입력 필드) */
+        .search-box input {
+            padding: 5px;
+            width: 100%;
+            /* 수정: 입력 필드를 100%로 설정하여 부모에 맞춤 */
+            border: none;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+
+        /* 검색 버튼 스타일 */
+        .search-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* 아이콘 스타일 (Font Awesome) */
+        .search-button i {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* 프로젝트 시작하기 */
+        .project-button {
+            background-color: #f90;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-right: 40px;
+            margin-left: auto;
+            display: flex;
+            min-width: 120px;
+            min-height: 20px;
+            align-items: center;
+            /* width: 100%; */
+            /* height: 100%; */
+        }
+
+        /* 미디어 쿼리: 화면이 작아질 때 */
+        @media screen and (max-width: 600px) {
+            .project-button {
+                display: none;
+            }
+        }
+
+        /* 프로젝트 버튼 디자인 */
+        .project-button a {
+            background-color: #f90;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* 슬라이딩 메뉴 */
+        .menu {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            /* margin-left: auto; */
+        }
+
+        /* 더보기 토글 메뉴 */
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            margin-left: 22px;
+            z-index: 3;
+            min-width: 60px;
+            min-height: 20px;
+        }
+
+        /* 미디어 쿼리: 화면이 작아질 때 */
+        @media screen and (max-width: 1200px) {
+            .menu-item {
+                display: none;
+                /* 화면이 작아지면 숨김 */
+            }
+        }
+
+        .menu-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            z-index: 1;
+            padding: 50px;
+            left: 0;
+            right: 0;
+            top: 100%;
+            width: 100%;
+        }
+
+
+        .menu-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .menu-content ul li {
+            margin: 10px;
+        }
+
+        .menu-content a {
+            text-decoration: none;
+            color: #fff;
+
+        }
+
+        /* SECTION */
+        section {
+            section {
+                width: 100%;
+                height: 100vh;
+                /* 뷰포트 높이를 100%로 설정 */
+                background: #fff;
+            }
+        }
+
+        /* ARTICLE */
+        article {
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+
+        /* SLIDER 부모 */
+        .slider-container {
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 430px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.7s ease;
+            max-height: 100%;
+        }
+
+        .slider img {
+            object-fit: cover;
+            width: 100vw;
+            max-height: 100%;
+        }
+
+
+
+
+        /* SLIDER BUTTONS */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            outline: none;
+            background-color: rgba(240, 240, 240, 0.5);
+            border-radius: 20%;
+        }
+
+        .prev {
+            left: 5%;
+        }
+
+        .next {
+            right: 5%;
+        }
+
+        /* 중간 아이콘 메뉴 */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 30%;
+            margin-right: 30%;
+            position: auto;
+            max-width: 100%;
+            flex-direction: row;
+        }
+
+        article {
+            margin: 0 10px;
+            align-items: center;
+            /* max-width: 100%; */
+        }
+
+        .a1,
+        .a2 {
+            flex: 1;
+            margin: 0 auto;
+            /* 가운데 정렬을 위해 좌우 마진을 auto로 설정 */
+
+        }
+
+        /* 추가한 아이콘 섹션 스타일 */
+        .icon-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+        }
+
+
+        /* 각 아이콘 아이템의 스타일 */
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 300px;
+            width: 100%;
+        
+        }
+
+        /* 각 행의 스타일 */
+        .icon-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+            margin-top: 3%;
+        }
+
+        /* 부모 컨테이너 스타일 */
+        .icon-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+
+        /* 아이콘 스타일 */
+        .icon-row i {
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            font-size: 24px;
+        }
+
+        /* 화면이 768px 이상일 때 */
+        @media screen and (min-width: 768px) {
+            .icon-item {
+                padding: calc(5px + 2vw);
+                /* 아이콘과 아이콘 사이의 간격을 동적으로 설정 */
+            }
+        }
+
+        /* 화면이 1200px 이상일 때 */
+        @media screen and (min-width: 1200px) {
+            .icon-item {
+                padding: calc(5px + 3vw);
+                /* 아이콘과 아이콘 사이의 간격을 동적으로 설정 */
+            }
+        }
+
+        /* 아이콘에 호버 효과 */
+        .icon-row i:hover {
+            color: rgb(255, 128, 0);
+        }
+
+        /* 랭킹 전체 스타일 */
+        .ranking-column {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            margin-left: 13%;
+            /* margin-left: 70px; */
+        }
+
+        /* 랭킹 제목 */
+        .ranking {
+            color: #555;
+            width: 150px;
+            height: 50px;
+        }
+
+        /* 랭킹 제목 세부 */
+        .ranking p {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 50px;
+            width: 200px;
+            margin-left: -30px;
+            margin-top: -30%;
+        }
+
+        .ranking li {
+            font-size: 20px;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; /* 세로 정렬을 위한 추가 */
+            text-align: center; /* 가로 중앙 정렬을 위한 추가 */
+        }
+
+
+        .ranking ul .text {
+            display: block;
+            width: 150px;
+            /* margin-top: 25px; */
+            font-size: medium;
+        }
+        .ranking ul .rank {
+            margin-top: 25px;
+            margin-right: 10px;
+            width: 40px;
+        }
+
+        .ranking ul span {
+            justify-content: center;
+        }
+
+                /* 랭킹 리스트 */
+                .ranking ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            width: 200px;
+            text-align: left;
+            font-size: 20px;
+            justify-content: center;
+            margin-left:-10%
+        }
+
+        .ranking-ul-group {
+            display: flex;
+            flex-direction: row;
+            align-items: left;
+            width: 260px;
+        }
+
+
+        .ranking img {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+            object-fit: cover;
+            border-radius: 15%;
+            margin-left: -10%;
+        }
+
+            @media screen and (max-width: 900px) {
+        .ranking li {
+            transition: margin-left 0.5s ease;
+            margin-left: 40%; /* 불필요한 우측 마진 제거 */
+        }
+
+        .ranking img,
+        .ranking .rank {
+            margin-right: 5px; /* 필요에 따라 조절 가능한 마진 설정 */
+        }
+    }
+
+            /* 랭킹 제목에 대한 쿼리 */
+            @media screen and (max-width: 1100px) {
+                .ranking p {
+    transition: margin-left 0.5s ease;
+                    margin-left: -50%;
+                }
+            }
+
+            /* 랭킹 전체에 대한 쿼리 */
+            @media screen and (max-width: 800px) {
+                .ranking-column {
+                    display: none;
+                    margin-left: auto;
+                }
+            }
+
+        /* 랭킹 음식 제목에 대한 쿼리 */
+        @media screen and (max-width: 1100px) {
+            .ranking ul .text {
+                display: none;
+            }
+        }
+
+        /* 정사각형 아이콘 */
+        .square-icons {
+            justify-content: center;
+            align-items: center;
+            margin-left: 6%;
+            margin-top: -4%;
+        }
+
+        .icon-row {
+            gap: 20px;
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        .new-icon-item {
+            width: 15vw;
+            height: 15vw;
+            padding: 2vw;
+            transition: all 0.3s ease;
+            object-fit: cover;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .new-icon-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+            border-radius: 5%;
+        }
+
+        .new-icon-item span {
+            display: block;
+            /* 기본적으로 block 속성을 가지도록 설정 */
+            text-align: center;
+            margin: 10px -20%;
+        }
+
+        /* 미디어 쿼리: 화면이 작아질 때 */
+        @media screen and (max-width: 1000px) {
+            .icon-row {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .square-icons {
+                margin-top: 10%;
+                margin-bottom: 10%;
+                margin-left: 12vh;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .new-icon-item span {
+                display: none;
+                /* 화면이 작아질 때 텍스트를 숨김 */
+                text-align: center;
+            }
+        }
+
+        /* flex로 좌우 배치 */
+        .display-flex {
+            display: inline-flex;
+        }
+
+        .display-flex>div {
+            flex: 2;
+            /* 첫 번째 아이템 */
+        }
+
+        .display-flex>div:nth-child(2) {
+            flex: 2;
+            /* 두 번째 아이템 */
+        }
+
+        /* 푸터 */
+        .footer { 
+			width:100%;
+			height:230px;
+			position:absolute;
+		}
+
+		.footer-back { 
+			background-color:rgb(233, 233, 233);
+			width:100%;
+			height:230px;
+			position:absolute;
+			top:0px;
+		}
+
+		.footer-group { 
+			height:163px;
+			position:absolute;
+			left:500px;
+		}
+
+		.footer-group-design { 
+			width:100%;
+			height:163px;
+			position:absolute;
+			left:0px;
+			top:0px;
+		}
+
+		.footer-down { 
+			color:rgba(185.00000417232513, 185.00000417232513, 185.00000417232513, 1);
+			width:500px;
+			height:30px;
+			position:absolute;
+			top:130px;
+			font-family:Poppins;
+			text-align:left;
+			font-size:12px;
+			letter-spacing:-1;
+		}
+
+		.footer-up { 
+			width:100%;
+			height:30px;
+			position:absolute;
+			left:0px;
+			top:10px;
+
+		}
+		.footer-up-right { 
+			color:rgba(185.00000417232513, 185.00000417232513, 185.00000417232513, 1);
+			width:300px;
+			height:30px;
+			position:absolute;
+			left:300px;
+			top:50px;
+			font-family:Poppins;
+			text-align:left;
+			font-size:12px;
+			letter-spacing:-1;
+			margin-left: 30px;
+		}
+
+		.footer-up-left { 
+			color:rgba(185.00000417232513, 185.00000417232513, 185.00000417232513, 1);
+			width:300px;
+			height:30px;
+			position:absolute;
+			top:50px;
+			font-family:Poppins;
+			text-align:left;
+			font-size:12px;
+			letter-spacing:-1;
+		}
+
+		.footer-logo { 
+			width:150px;
+			height:150px;
+			position:absolute;
+			left:-300px;
+			top:40px;
+			background-image:url(./01_logoImg/logoNon.png);
+			background-repeat:no-repeat;
+			background-size:cover;
+		}
+
+
+        @media screen and (max-width: 1000px) {
+            .footer-logo {
+                
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .footer-up {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .footer-down {
+                display: none;
+            }
+        }
+
+        .second-container {
+            margin-bottom: 10%;
+            padding-top: 7%;
+        }
+
+        .second-square-icon-container {
+            display: flex; /* 아이콘을 가로로 나란히 배치하기 위해 flex 사용 */
+            margin-left: 5%;
+        }
+     
+        .second-square-icon-wrapper {
+            text-align: center; /* 아이콘과 텍스트를 가운데 정렬 */
+            width: 20vw;
+            height: 15vw;
+            padding: 1vw;
+            transition: all 0.3s ease;
+            object-fit: cover;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 20vh;
+        }
+
+        .second-square-icon {
+             width: 100%; /* 각각의 아이콘의 가로 크기 */
+             height: 100%; /* 각각의 아이콘의 세로 크기 */
+             margin-bottom: 5px; /* 아이콘과 텍스트 사이의 간격 조절 */
+             border-radius: 5%;
+        }
+
+        .second-container-title {
+            margin-left: 7%;
+            margin-bottom: 3%
+        }
+
+        @media screen and (max-width: 600px) {
+            .second-square-icon-wrapper p {
+                display: none;
+            }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- 로고 이미지 -------------->
+        <img src="./01_logoImg/textLogoNone.png" alt="로고" width="100" class="logo-image">
+
+
+        <!-- 상단 메뉴 -------------->
+        <nav>
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">프로젝트</a></li>
+                <li><a href="#">펀딩</a></li>
+                <li><a href="#">도움말</a></li>
+            </ul>
+        </nav>
+
+        <!-- 메뉴 2: 토글 기능 있음 -------------->
+        <div class="menu-item">
+            <label class="toggle-label" id="toggle-label">더보기</label>
+            <div class="menu-content" id="menu-content">
+                <ul>
+                    <li><a href="#">메뉴 항목 1</a></li>
+                    <li><a href="#">메뉴 항목 2</a></li>
+                    <li><a href="#">메뉴 항목 3</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 팝업 토글 제이쿼리 -------------->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+        <!-- 팝업 토글 함수 -------------->
+        <script>
+            $(document).ready(function () {
+                $('#toggle-label').click(function () {
+                    $('#menu-content').slideToggle(500);
+                });
+            });
+        </script>
+
+        <!-- 검색창 -------------->
+        <div class="search-box">
+            <input type="text" placeholder="검색어를 입력하세요">
+            <i class="fas fa-search"></i>
+
+        </div>
+
+        <!-- 로그인 회원가입 -------------->
+        <div class="login-signup">
+            <nav>
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- 프로젝트 시작하기 -------------->
+        <div class="project-button">
+            <a href="#">프로젝트 시작하기</a>
+        </div>
+</header>
+
+    <!-- SECTION -------------->
+    <article class="slider-container">
+        <div class="slider">
+            <img src="./02_bannerImg/햄버거.jpeg" alt="Image 1">
+            <img src="./02_bannerImg/떡볶이.jpg" alt="Image 2">
+            <img src="./02_bannerImg/스테이크.jpg" alt="Image 3">
+            <img src="./02_bannerImg/피자.jpeg" alt="Image 4">
+            <img src="./02_bannerImg/인도음식.jpeg" alt="Image 5">
+            <img src="./02_bannerImg/노티드.avif" alt="Image 6">
+
+        </div>
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+    </article>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = document.querySelector('.slider');
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+            let currentIndex = 0;
+
+            function showImage(index) {
+                const slideWidth = slider.clientWidth / 6; // 5은 이미지 개수
+                slider.style.transform = `translateX(-${index * slideWidth}px)`;
+            }
+
+            prevButton.addEventListener('click', function () {
+                currentIndex = (currentIndex - 1 + 6) % 6;
+                showImage(currentIndex);
+            });
+
+            nextButton.addEventListener('click', function () {
+                currentIndex = (currentIndex + 1) % 6;
+                showImage(currentIndex);
+            });
+        });
+    </script>
+
+
+
+        <!-- 아이콘 (article 1) -------------->
+        <article>
+            <div class="icon-row">
+                <div class="icon-item">
+                    <i class="fas fa-heart"></i>
+                    <span>좋아요</span>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-star"></i>
+                    <span>인기</span>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-thumbs-up"></i>
+                    <span>신규</span>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-comment"></i>
+                    <span>마감임박</span>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-share"></i>
+                    <span>공개예정</span>
+                </div>
+            </div>
+        </article>
+
+        <hr>
+        <br><br>
+        <div class="second-container-title">
+            <h2>신규 펀딩</h2>
+            </div>
+        <!-- div로 랭킹, 정사각형 아이콘 묶어줌 -->
+        <div class="display-flex">
+            
+
+                <!-- 정사각형 아이콘 2행 3열 (article 3) -------------->
+            <article class="square-icons">
+                <!-- 아이콘 리스트 업데이트 함수 -->
+               <script>
+                    const productIcons = [
+                        { icon: "./00_img/유기농 현미 누룽지 포켓스낵으로, 간편한 한 끼부터 아이들 간식까지 해결.png", text: "유기농 현미 누룽지 포켓스낵" },
+                        { icon: "./00_img/임금님께 진상하던 쌀로 빚은 프리미엄 막걸리 '백년향'.png", text: "프리미엄 막걸리 '백년향'" },
+                        { icon: "./00_img/자두의 무한 변신!! 철없는 자두떡! 철없는 자두청!.png", text: "철없는 자두떡! 철없는 자두청!" },
+                        { icon: "./00_img/클라우드 푸딩 최초, 최대 사이즈] 팔뚝만한 왕특대 킹타이거새우를 소개합니다!.png", text: "건강한 두부밥" },
+                        { icon: "./00_img/지금까지 함박은 잊으라! 3.5cm두께 프랑스식 진짜 함박스테이크.png", text: "프랑스식 진짜 함박스테이크" },
+                        { icon: "./00_img/[스위스직수입한정판] 오리지널 퐁듀치즈의 압도적 풍미 <퐁듀스페셜에디션>.png", text: "<퐁듀스페셜에디션>" },
+                    ];
+
+                    // 아이콘 리스트  업데이트 함수
+                    function updateProductIcons() {
+                        const iconList = document.querySelector('.square-icons');
+                        iconList.innerHTML = ''; // 기존의 리스트 초기화
+
+                        // 아이콘을 2행 3열로 나열
+                        for (let i = 0; i < 2; i++) {
+                            const row = document.createElement('div');
+                            row.classList.add('icon-row');
+
+                            for (let j = 0; j < 3; j++) {
+                                const iconItem = document.createElement('div');
+                                iconItem.classList.add('new-icon-item'); // 클래스 이름 변경
+
+                                const index = i * 3 + j;
+                                if (index < productIcons.length) {
+                                    iconItem.innerHTML = `
+                                <img src="${productIcons[index].icon}" alt="${productIcons[index].text}"><br>
+                                <span>${productIcons[index].text}</span>
+                            `;
+                                }
+
+                                row.appendChild(iconItem);
+                            }
+
+                            iconList.appendChild(row);
+                        }
+                    }
+                    // 초기 아이콘 리스트 업데이트
+                    updateProductIcons();
+
+                </script>
+            </article>
+
+            <!-- 랭킹 (article 2) -------------->
+            <article class="ranking-column">
+                
+                <div class="ranking">
+                    <p>랭킹 순위</p>
+                    <!-- 랭킹 리스트 -->
+                    <li>
+                        <ul>
+                            <div class="ranking-ul-group">
+                                <img src="./00_img/[술빚는호랑이] 벌꿀로 만든 찐꿀술, 여름 야생화를 담은 '시즌'.png" alt="Icon 1">
+                                <span class="rank">1위</span>
+                                <span class="text">[술빚는호랑이] 벌꿀로 만든 찐꿀술, 여름 야생화를 담은 '시즌'</span>
+                            </div>
+                            <br>
+                            <div class="ranking-ul-group">
+                                <img src="./00_img/건강한 먹거리로 식사의 대안 프리미엄 수제 8종 쿠키 버니 베이커리.png" alt="Icon 1">
+                                <span class="rank">2위</span>
+                                <span class="text">건강한 먹거리로 식사의 대안 프리미엄 수제 8종 쿠키 버니 베이커리</span>
+                            </div>
+                            <br>
+                            <div class="ranking-ul-group">
+                                <img src="./00_img/[GAP인증] 올겨울 첫 수확, 와디즈 최고평점 프리미엄 킹스베리!.png" alt="Icon 1">
+                                <span class="rank">3위</span>
+                                <span class="text">[GAP인증] 올겨울 첫 수확, 와디즈 최고평점 프리미엄 킹스베리!.png</span>
+                            </div>
+                            <br>
+                            <div class="ranking-ul-group">
+                                <img src="./00_img/만족도 5.0 I 국내 첫 출시! 가마버터우동, 중독적인 고소한 맛!.png" alt="Icon 1">
+                                <span class="rank">4위</span>
+                                <span class="text">만족도 5.0 I 국내 첫 출시! 가마버터우동, 중독적인 고소한 맛!</span>
+                            </div>
+                            <br>
+                            <div class="ranking-ul-group">
+                                <img src="./00_img/아빠농부.딸농부의 국내산 프로폴리스와 숙성된 꿀로만든 라니 프로폴리스캔디.png" alt="Icon 1">
+                                <span class="rank">5위</span>
+                                <span class="text">아빠농부.딸농부의 국내산 프로폴리스와 숙성된 꿀로만든 라니 프로폴리스캔디</span>
+                            </div>
+                        </ul>
+                    </li>
+                </div>
+            </article>
+            </div>
+
+        <br><br><br><br><br><br><br>
+<hr>
+
+</section>
+
+    </article>
+
+
+<article class ="second-container">
+    <div class="second-container-title">
+        <h2>신규 리펀딩</h2>
+        </div>
+    <!-- 하단 아이콘 5개 첫 번째 줄 -->
+    <div class = "second-square-icon-container">
+        <!-- 아이콘과 텍스트 중앙정렬 -->
+        <div class="second-square-icon-wrapper">
+            <img class="second-square-icon" src="./00_img/[30년 전통] 코리안 왕실 디저트, 올 겨울을 위한 뜨끈한 쌍화차.png" alt="아이콘 1">
+            <p>[30년 전통] [30년 전통] 코리안 왕실 디저트, 올 겨울을 위한 뜨끈한 쌍화차</p>
+          </div>
+          <div class="second-square-icon-wrapper">
+            <img class="second-square-icon" src="./00_img/[슈톨렌 맛집] 1년을 기다린 화이트 크리스마스 피카타임 슈톨렌.png" alt="아이콘 1">
+            <p>[슈톨렌 맛집] 1년을 기다린 화이트 크리스마스 피카타임 슈톨렌</p>
+          </div>
+          <div class="second-square-icon-wrapper">
+            <img class="second-square-icon" src="./00_img/딸기4종세트ㅣ다양한 딸기를 한번에! 극찬의 보장된 달콤함, 신품종딸기4종.png" alt="아이콘 1">
+            <p>딸기4종세트ㅣ다양한 딸기를 한번에! 극찬의 보장된 달콤함, 신품종딸기4종</p>
+          </div>
+          <div class="second-square-icon-wrapper">
+            <img class="second-square-icon" src="./00_img/신선한 바질과 국산 잣으로 만든 맛과 풍미가 가득한 바질페스토!.png" alt="아이콘 1">
+            <p>신선한 바질과 국산 잣으로 만든 맛과 풍미가 가득한 바질페스토!</p>
+            </div>
+     </div>
+
+    <!-- 하단 아이콘 5개 두 번째 줄 -->
+    <div class = "second-square-icon-container">
+        <!-- 아이콘과 텍스트 중앙정렬 -->
+        <div class="second-square-icon-wrapper">
+            <img class="second-square-icon" src="./00_img/<후기꼭확인하세요>역대급크기,품종 I 새우즙이 팡-터지는 킹타이거플래터.png" alt="아이콘 1">
+            <p><후기꼭확인하세요>역대급크기,품종 I 새우즙이 팡-터지는 킹타이거플래터</p>
+          </div>
+          <div class="second-square-icon-wrapper">
+            <img class="second-square-icon" src="./00_img/아빠농부.딸농부의 국내산 프로폴리스와 숙성된 꿀로만든 라니 프로폴리스캔디.png" alt="아이콘 1">
+            <p>아빠농부.딸농부의 국내산 프로폴리스와 숙성된 꿀로만든 라니 프로폴리스캔디.png</p>
+          </div>
+          <div class="second-square-icon-wrapper">
+            <img class="second-square-icon" src="./00_img/클라우드 푸딩 최초, 최대 사이즈] 팔뚝만한 왕특대 킹타이거새우를 소개합니다!.png" alt="아이콘 1">
+            <p>클라우드 푸딩 최초, 최대 사이즈] 팔뚝만한 왕특대 킹타이거새우를 소개합니다!</p>
+          </div>
+          <div class="second-square-icon-wrapper">
+            <img class="second-square-icon" src="./00_img/가자미살 생선까스.png" alt="아이콘 1">
+            <p>겉바속촉! 겉은 바삭 속은 촉촉하고 부드러운 가자미살 생선까스!</p>
+            </div>
+        </div>
+    </div>
+    </article>
+
+
+        <div class=footer>
+		<div class="footer-back"></div>
+		<div class="footer-left"></div>
+		<div class=footer-group>
+		  <div class=footer-group-design><span  class="footer-down">
+	  일부 상품의 경우 와디즈는 통신판매중개자이며 통신판매 당사자가 아닙니다.
+	  해당되는 상품의 경우 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다. </span>
+			<div class=footer-up><span  class="footer-up-right">이메일 상담   abcdefg@gmail.com
+	  유선 상담 1234-5678</span><span  class="footer-up-left">Cloud Fooding 클라우드 푸딩
+	  사업자 등록번호 1234-56-7890
+	  서울 종로구 인사동길 12 대일빌딩 7층 클라우드 푸딩
+	  </span>
+	</div>
+			<div class="footer-logo"></div>
+		  </div>
+		</div>
+	  </div>
+</body>
+</html>

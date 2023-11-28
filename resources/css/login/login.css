@@ -31,10 +31,10 @@ footer{
 
 }
 #login {
-    width: 500px; /* Adjust the width as needed */
-    height: 800px;
+    width: 800px; /* Adjust the width as needed */
+    height: 1000px;
     text-align: center; /* Align text content to the center */
-    border: 1px solid red;
+    
 }
 .signin_text{
     font-size: 40px; 
@@ -106,8 +106,11 @@ footer{
 .downpart ul,li{
     padding: 10px;
 }
-
+.btjoin{
+    padding-bottom: 100px;
+}
 .btjoin button {
+    
     /* 버튼의 높이와 너비를 조정하여 크게 만듭니다. */
     width: 350px;
     height: 50px;
@@ -147,3 +150,23 @@ footer{
     width: 300px; /* 원하는 너비로 설정하세요. */
     height: auto; /* 높이는 자동으로 조정됩니다. */
 }
+
+.down{
+    
+    padding-top: 20px;
+    border-top: 1px solid grey;
+}
+
+.down span{
+    
+    margin: 30px;
+}
+.movetext1{
+    position: relative;
+    right: 148px;
+}
+.movetext2{
+    position: relative;
+    right: 120px;
+}
+
