@@ -47,12 +47,6 @@
 	margin-right: 10vh;
 }
 
-
-
-
-
-
-
 /* 제출하기 - 팝업 */
 .popup {
     display: none;
@@ -176,10 +170,6 @@
 	line-height:px;
 }
 
-
-
-
-
 /* 보드 - 좌측상단 로고 */
 .board-logo img {
     width: 120px;
@@ -248,7 +238,7 @@
 	position:absolute;
 	left:216px;
 	top:65px;
-	font-family:Lato;
+	font-family:Poppins;
 	text-align:left;
 	font-size:12px;
 	letter-spacing:0;
