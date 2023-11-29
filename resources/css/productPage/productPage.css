@@ -617,7 +617,87 @@ align-items: center;
 	width: 100px;
 	font-size: 20px;
 }
+.btns-con{
+	height: 230px;
+	width: auto;
+	background-color: antiquewhite;
+	display: flex;
+    align-items: center; /* 수직 가운데 정렬을 위한 설정 */
+    justify-content: space-between;
 
+}
+.goodbtn{
+	width: 85px;
+	height: 85px;
+	color: white;
+	border: none;
+	background-color: orange;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+.buybtn{
+	width: 570px;
+	height: 85px;
+	background-color: orange;
+	color: white;
+	border: none;
+	font-size: 30px;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+.businesscard-con{
+	height: 220px;
+	border: 1px solid beige;
+	border-radius: 10px;
+}
+.businesscard img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.businesscard{
+        margin-left: 50px;
+		margin-top: 30px;
+        display: flex;
+    align-items: center; /* 세로 정렬을 중앙으로 설정 */
+
+}
+.businesscard-right{
+    margin-left: 10px;
+    margin-bottom: 2px;
+    font-size: 20px;
+}
+.businesscard-home{
+	display: flex;
+    align-items: center; /* 세로 정렬을 중앙으로 설정 */
+	margin-left: 50px;
+	margin-top: 30px;
+	
+}
+.addr{
+	margin-left: 50px;
+	text-decoration: underline;
+
+}
+.business-sns{
+	margin-left: 50px;
+	margin-top: 30px;
+}
+.business-sns img{
+	margin-left: 75px;
+	width: 30px;
+}
+.report-con{
+	height: 50px;
+	background-color: antiquewhite;
+	margin-top: 40px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center; /* 세로 정렬을 중앙으로 설정 */
+	
+}
 
 
 
