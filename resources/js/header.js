@@ -3,4 +3,4 @@ $(document).ready(function () {
     $('#toggle-label').click(function () {
         $('#menu-content').slideToggle(500);
     });
-});
+});     
