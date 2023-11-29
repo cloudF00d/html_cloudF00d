@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../resources/css/payment/buypage.css">
+</head>
+
+<body>
+    <header></header>
+    <div id="body">
+
+        <div id="left">
+            <div class="payment-info">
+                <div style="float: left;">
+                    <a href="../../resources/images/logonon_1 (1).png"><img src="../../resources/images/backbtn.jpg" width="25px"
+                            height="25px"></a>
+                </div>
+                <div>
+                    <h2>결제정보</h2>
+                </div>
+            </div>
+
+            <div class="payment-area">
+                <div class="payment-product">
+                    <h4>결제상품</h4>
+                    <div style="float: left;">
+                        <a href="../../resources/images/logonon_1 (1).png"><img
+                                src="../../resources/images/logonon_1 (1).png" width="60px" height="60px"></a>
+                    </div>
+
+                    <div class="menu-item">
+                        <span class="menu-name">결제할 음식 이름</span>
+                        <span class="menu-price">30,000won</span>
+                    </div>
+
+
+                    <div id="counter-container">
+                        <div id="counter-controls">
+                            <button class="btn" onclick="decrease()">-</button>
+                            <span id="counter-value">0</span>
+                            <button class="btn" onclick="increase()">+</button>
+                        </div>
+                        <!-- 휴지통버튼 -->
+                        <button class="trash-btn"></button>
+
+                    </div>
+
+                </div>
+                <div class="payment-product">
+
+                    <div style="float: left;">
+                        <a href="/3조결제/KakaoTalk_20231019_131150823.jpg"><img
+                                src="../../resources/images/logonon_1 (1).png" width="60px" height="60px"></a>
+                    </div>
+
+                    <div class="menu-item">
+                        <span class="menu-name">결제할 음식 이름</span>
+                        <span class="menu-price">30,000won</span>
+                    </div>
+
+
+                    <div id="counter-container">
+                        <div id="counter-controls">
+                            <button class="btn" onclick="decrease()">-</button>
+                            <span id="counter-value">0</span>
+                            <button class="btn" onclick="increase()">+</button>
+                        </div>
+                        <!-- 휴지통버튼 -->
+                        <button class="trash-btn"></button>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="bilge">
+
+                <form action="search" method="post">
+                    <div class="coupon-action">
+                        
+                        <div>
+                            <div>할인쿠폰</div>
+                          <input type="text" name="적용하기" required>&nbsp; 
+                            <!-- <input type="submit" value="적용하기">  -->
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <div class="coupon-btn">
+                            <button type="submit">적용하기</button>
+                        </div>
+
+                    </div>
+
+
+                </form>
+
+                <div class="total-product-amount">
+                    <span class="total-amount">상품 전체금액</span>
+                    <span class="total-price">30,000won</span>
+                </div>
+                <div class="apply-coupon">
+                    <span class="total-amount">쿠폰 적용금액</span>
+                    <span class="total-price">23,000won</span>
+                </div>
+                <div class="delivery-fee">
+                    <span class="shipping-cost">배송비</span>
+                    <span class="cost">3,000won</span>
+                </div>
+                <div class="final-amount">
+                    <span class="gun-cost">총금액</span>
+                    <span class="gun-won">26,000won</span>
+                </div>
+
+            </div>
+            <div class="payment-con">
+                <button class="payment" type="button">결제</button>
+            </div>
+        </div>
+
+
+        <div class="right">
+
+        
+        <div id="right">
+            <div id="progress">
+                <span><div class="pay">주문/결제</div></span>&mdash;<span><img src="../../resources/images/uncheckbtn.PNG" class="uncheck"></span>&mdash;<span>배송중</span>&mdash;<span><img src="../../resources/images/uncheckbtn.PNG" class="uncheck"></span>&mdash;<span>배송완료</span>
+            </div>
+            <div class="orderer-info-con">
+                
+                <div class="orderer-info">
+                <h4>주문자 정보</h4>
+                <div class="name">
+                    <div class="firstname">
+                        <div>성</div>
+                        <input type="text" name="firstname" required>&nbsp;
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="lastname">
+                        <div>이름</div>
+                        <input type="text" name="lastname" required>&nbsp;
+                    </div>
+                </div>
+                <div class="email">
+                    <div>이메일</div>
+                    <input type="email" name="email" required>&nbsp;
+                </div>
+                <div class="number">핸드폰 번호</div>
+                <form class="phone">
+                            
+                    <select id="countryCode">
+                        <option value="+82" selected>대한민국 (+82)</option>
+                        <option value="+1">미국 (+1)</option>
+                        <option value="+44">영국 (+44)</option>
+                        <option value="+81">일본 (+81)</option>
+                    </select>
+                    <input type="text" name="phone" required>&nbsp;
+                
+                </form>
+            </div>
+        </div>
+            <div class="void"></div>
+
+        <div class="order-details-con">
+
+        
+            <div class="order-details">
+                <h4>주문 상세정보</h4>
+
+                <div class="adrs">
+                    <div class="adrss1">주소</div>
+                    <input type="text" name="adrs" required>&nbsp;
+                </div>
+                <div class="detailed-address">
+                    <div class="adrss2">상세주소</div>
+                    <input type="text" name="detailed-adrs" required>&nbsp;
+                </div>
+                <div class="requested">
+                    <div class="req">요청사항</div>
+                    <input type="text" name="requested" required>&nbsp;
+                </div>
+                <div class="order-confirmation">
+                    <input type="checkbox" id="confirmationCheckbox">
+                    <label for="confirmationCheckbox">주문정보를 모두 확인했습니다</label>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    </div>
+    <script>
+        let counterValue = 0;
+
+        // 증가 함수
+        function increase() {
+            counterValue++;
+            updateCounter();
+        }
+
+        // 감소 함수
+        function decrease() {
+            if (counterValue > 0) {
+                counterValue--;
+                updateCounter();
+            }
+        }
+        function updateCounter() {
+            document.getElementById('counter-value').innerText = counterValue;
+        }
+    </script>
+
+
+    <footer></footer>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+/* header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* logo - margin */
+.logo-image {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* 헤더 메뉴 부모 요소 */
+nav {
+    text-align: center;
+    min-width: 60px;
+    min-height: 20px;
+}
+
+/* 헤더 메뉴 목록 */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav.ul.hidden {
+    display: none;
+}
+
+/* 헤더 메뉴 항목 스타일 */
+nav ul li {
+    margin: 0 15px;
+    min-width: 80px;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* 헤더 메뉴 하이퍼링크 스타일 */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* 검색어 - 부모 */
+.search-box {
+    background-color: #eee;
+    padding: 3px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    min-width: 190px;
+    min-height: 20px;
+}
+
+/* 검색어 - 자식 (입력 필드) */
+.search-box input {
+    padding: 5px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    margin-right: auto;
+}
+
+/* 돋보기 */
+.search-box img {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* 프로젝트 생성 */
+.project-button {
+    background-color: #f90;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 40px;
+    margin-left: auto;
+    display: flex;
+    min-width: 120px;
+    min-height: 20px;
+}
+
+/* 프로젝트 생성 버튼 디자인 */
+.project-button a {
+    background-color: #f90;
+    color: #fff;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 더보기 토글 */
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: 22px;
+    z-index: 3;
+    min-width: 60px;
+    min-height: 20px;
+}
+
+.toggle-label {
+    cursor: pointer;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    z-index: 1;
+    padding: 50px;
+    left: 0;
+    right: 0;
+    top: 100%;
+    width: 100%;
+}
+
+.menu-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-content ul li {
+    margin: 10px;
+}
+
+.menu-content a {
+    text-decoration: none;
+    color: #fff;
+
+}
