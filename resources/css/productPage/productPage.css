@@ -604,6 +604,25 @@ align-items: center;
 	text-align: left;
 }
 
+.introduction-con{
+	border-bottom: 1px solid #999;
+	height: 450px;
+}
+.introduction{
+	font-size: 36px;
+}
+.introduction-span{
+	background-color: orange;
+	height: 30px;
+	width: 100px;
+	font-size: 20px;
+}
+
+
+
+
+
+
 
 
 .pagination-box {
