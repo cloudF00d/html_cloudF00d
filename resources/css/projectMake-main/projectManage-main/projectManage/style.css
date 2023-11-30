@@ -1,9 +1,14 @@
+* {
+	text-decoration: none;
+	font-family: Poppins;
+}
+
 /* 배경 보드 */
 .back-board {
     box-shadow: 0px 10px 60px rgba(225.83437621593475, 236.193745136261, 248.62500607967377, 0.5);
     background-color: #fff;
     width: 1000px;
-    height: 1500px;
+    height: 1700px;
     border-radius: 30px;
     padding-bottom: 50px;
     margin: 20px 0 100px 100px;
@@ -233,7 +238,7 @@
 
 .folder-left1 { 
 	color:rgba(243.00000071525574, 125.00000014901161, 29.000000171363354, 1);
-	width:54px;
+	width:80px;
 	height:18px;
 	position:absolute;
 	left:216px;
