@@ -134,10 +134,10 @@
                     <div class="seller">
                         <div class="img">
                             <img src="../../resources/images/checkbtn.PNG" alt="">
-                              <div class="img-right">이동락</div>
+                              <div class="img-right">주식회사 민하킴</div>
                             </div>
                             <div>
-                                <span><span>홈페이지 : </span><span class="seller-addr">www.naver.com</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <span><span>홈페이지 : </span><span class="seller-addr">http://minha.com/minhaminha</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                             </div>
                     </div>
                 </div>
@@ -180,9 +180,36 @@
                 </div>
 
                 <div class="btns-con">
-                    <button class="goodbtn">좋아요숫자</button>
+                    <button class="goodbtn"><div onclick="like()" class="like-button" id="likeButton">&#10084;</div><span id="likeCount">0</span></button>
                     <button class="buybtn">예약 구매하기</button>
-
+                    <script>
+                        let liked = false; // 좋아요 상태를 나타내는 변수
+                        let likeCount = 0; // 좋아요 개수를 저장하는 변수
+                    
+                        function like() {
+                            const likeButton = document.getElementById('likeButton');
+                            const likeCountElement = document.getElementById('likeCount');
+                    
+                            if (!liked) {
+                                // 좋아요 버튼을 빨간색으로 변경
+                                likeButton.classList.add('liked');
+                                // 좋아요 개수를 증가
+                                likeCount++;
+                                // 좋아요 개수 업데이트
+                                likeCountElement.textContent = likeCount;
+                            } else {
+                                // 좋아요 버튼을 원래 색으로 변경
+                                likeButton.classList.remove('liked');
+                                // 좋아요 개수를 감소
+                                likeCount--;
+                                // 좋아요 개수 업데이트
+                                likeCountElement.textContent = likeCount;
+                            }
+                    
+                            // 좋아요 상태 변경
+                            liked = !liked;
+                        }
+                    </script>
                 </div>
                 <div class="businesscard-con">
                     <div class="businesscard">
@@ -193,7 +220,7 @@
                         <div class="business-sns">SNS <img src="/resources/images/insta.png" alt=""></div>
                 </div>
                 <div class="report-con">
-                    <span>프로젝트에 문제가 있나요?<span style="margin-left: 360px;">신고하러가기  ></span></span>
+                    <span>프로젝트에 문제가 있나요?<span style="margin-left: 360px;"><a href="프로젝트신고">신고하러가기  ></a></span></span>
                 </div>
                 <div class="pickkeyword-con">
                     <div class="pickkeyword">리워드 선택</div>
@@ -291,7 +318,7 @@
                     <br>
                 </div>
                 <div class="btns-con">
-                    <button class="goodbtn">좋아요숫자</button>
+                    <button class="goodbtn"><div onclick="like()" class="like-button" id="likeButton">&#10084;</div><span id="likeCount">0</span></button>
                     <button class="buybtn">예약 구매하기</button>
 
                 </div>
