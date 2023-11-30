@@ -1,6 +1,6 @@
 * {
-font-family: Poppins;
-text-decoration: none;
+    font-family: Poppins;
+    text-decoration: none;
 }
 
 
@@ -27,15 +27,11 @@ text-decoration: none;
     width: 250px;
     border-radius: 5px;
     margin-left: auto;
-	margin-right: 10vh;
+    margin-right: 10vh;
 }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> minha
 .checkbox-list {
-    margin-left:10vh;
+    margin-left: 10vh;
 }
 
 label strong {
@@ -108,7 +104,7 @@ select {
     width: 250px;
     border-radius: 5px;
     margin-left: auto;
-	margin-right: 10vh;
+    margin-right: 10vh;
 }
 
 /* 심사 서류 */
@@ -126,52 +122,50 @@ select {
     cursor: pointer;
 }
 
-.paper-box p{
+.paper-box p {
     margin: 30px;
     font-size: 15px;
     color: #b9b9b9;
 }
 
-.fa-solid, .fas {
-   font-size: 60px;
-   color: #b9b9b9;
-   margin-top: 35px;
+.fa-solid,
+.fas {
+    font-size: 60px;
+    color: #b9b9b9;
+    margin-top: 35px;
 }
 
- /* 팝업 모달 스타일 */
- #fileAttachmentPopup,
- #registrationCompletePopup {
-     display: none;
-     position: fixed;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     padding: 20px;
-     background-color: #fff;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
- }
+/* 팝업 모달 스타일 */
+#fileAttachmentPopup,
+#registrationCompletePopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 
- #fileAttachmentPopup p,
- #registrationCompletePopup p {
-     margin-bottom: 20px;
- }
+#fileAttachmentPopup p,
+#registrationCompletePopup p {
+    margin-bottom: 20px;
+}
 
-/* 등록된 파일명을 표시할 스타일 */
 #attachedFileName {
     margin-top: 10px;
-    font-size: 13px; /* 크기 조절을 위한 스타일 추가 */
-    color: #333; /* 텍스트 색상 추가 */
+    font-size: 13px;
+    color: #333;
     max-width: 150px;
-    /* text-overflow: ellipsis; */
     white-space: nowrap;
 }
 
 .attachedFileNAmeContainer {
     margin-top: 10px;
-    font-size: 13px; /* 크기 조절을 위한 스타일 추가 */
-    color: #333; /* 텍스트 색상 추가 */
+    font-size: 13px;
+    color: #333;
     max-width: 150px;
-    /* text-overflow: ellipsis; */
     white-space: nowrap;
 }
 
@@ -208,7 +202,8 @@ select {
 
 /* 목표 금액을 입력해 주세요. */
 input:focus::placeholder {
-    color: transparent; /* 포커스되면 투명하게 */
+    color: transparent;
+    /* 포커스되면 투명하게 */
 }
 
 /* 목표금액 입력창 - 원 */
