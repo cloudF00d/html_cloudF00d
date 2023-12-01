@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../resources/css/projectMake/projectApply.css">
+</head>
+<body>
+
+<!-- 헤더시작 -->
+<header>
+	
+
+	<!-- 로고 이미지 -->
+	<img src="../../resources/images/textlogonone_2.png" alt="로고" width="100" class="logo-image">
+
+
+	<!-- 상단 메뉴 -->
+	<nav>
+		<ul>
+			<li><a href="#">홈</a></li>
+			<li><a href="#">프로젝트</a></li>
+			<li><a href="#">펀딩</a></li>
+			<li><a href="#">도움말</a></li>
+		</ul>
+	</nav>
+
+	<!-- 상단 - 더보기 메뉴 -->
+	<div class="menu-item">
+		<label class="toggle-label" id="toggle-label">더보기</label>
+		<div class="menu-content" id="menu-content">
+			<ul>
+				<li><a href="#">메뉴 항목 1</a></li>
+				<li><a href="#">메뉴 항목 2</a></li>
+				<li><a href="#">메뉴 항목 3</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 더보기 토글 제이쿼리 -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<!-- 더보기 토글 함수 -->
+	<script>
+		$(document).ready(function () {
+			$('#toggle-label').click(function () {
+				$('#menu-content').slideToggle(500);
+			});
+		});
+	</script>
+
+	<!-- 검색창 -->
+	<div class="search-box">
+		<input type="text" placeholder="검색어를 입력하세요">
+		<i class="fas fa-search"></i>
+	</div>
+
+	<!-- 로그인 회원가입 -->
+	<div class="login-signup">
+		<nav>
+			<ul>
+				<li><a href="#">로그인</a></li>
+				<li><a href="#">회원가입</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<!-- 프로젝트 시작하기 -->
+	<div class="project-button">
+		<a href="#">프로젝트 시작하기</a>
+	</div>
+</header>
+
+<!-- 헤더끝 -->
+
+<div class="buyok">
+    <div class="buyokay">
+
+    
+    <div class="payinfo">
+        <div style="float: left;">
+            <a href="../../resources/images/logonon_1 (1).png"><img src="/resources/images/minicon/backbtn.jpg"
+                 width="25px" height="25px"></a>
+        </div>
+    <div><h2>이전</h2></div>
+</div>
+<div class="maininfo">
+    
+    <div class="payment-confirmation">
+        <div class="firstlogo"><a href="mainpage"><img src="/resources/images/minicon/로고2.png" alt="" width="150px"></a></div>
+        
+        <h3><pre>     프로젝트신청이 완료되었습니다.
+         심사 승인 후 공개됩니다.
+        </pre></h3>
+        <div class="secondlogo"><img src="/resources/images/minicon/foodbox.png" alt=""></div>
+    </div>
+   
+    <div class="product-list">
+        <div class="product-status">
+            <div class="orderStatus">
+                <span><div class="pay" style="color: orange;">주문/결제</div></span>&mdash;<span><img src="/resources/images/minicon/checkbtn.PNG" class="uncheck"></span>&mdash;<span>배송중</span>&mdash;<span><img src="/resources/images/minicon/uncheckbtn.PNG" class="uncheck"></span>&mdash;<span>배송완료</span>
+            </div>
+        </div>
+       
+    </div>
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+        <!-- 푸터는 이아래에 붙여 -->
+
+<!-- 푸터 시작 -->
+
+
+
+ 
+</body>
+</html>

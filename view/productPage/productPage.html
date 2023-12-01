@@ -148,7 +148,7 @@
                               <div class="guide-title">커뮤니티가이드</div>
                             </div>
                             <div class="pre-con">
-<pre style="">            프로젝트와 무관한 글, 사진, 광고성, 욕설, 비방, 도배 등의 글은 예고 없이 삭제 등 조치가 취해질 수 있습니다. 해당 내용으로
+<pre >            프로젝트와 무관한 글, 사진, 광고성, 욕설, 비방, 도배 등의 글은 예고 없이 삭제 등 조치가 취해질 수 있습니다. 해당 내용으로
             인해 메이커, 서포터, 제3자에게 피해가 발생되지 않도록 유의해 주세요.
 
             삭제가 필요한 글은 info@wadiz.kr 로 신고를 접수해 주세요. 신고 접수 시 반드시 신고인 아이디, 게시물 작성자 아이디, 프
@@ -180,34 +180,40 @@
                 </div>
 
                 <div class="btns-con">
-                    <button class="goodbtn"><div onclick="like()" class="like-button" id="likeButton">&#10084;</div><span id="likeCount">0</span></button>
+                    <button class="goodbtn"><div onclick="like('button1')" class="like-button" id="button1">&#10084;</div><span id="likeCount">0</span></button>
                     <button class="buybtn">예약 구매하기</button>
                     <script>
-                        let liked = false; // 좋아요 상태를 나타내는 변수
-                        let likeCount = 0; // 좋아요 개수를 저장하는 변수
+                        let liked1 = false; // 첫 번째 좋아요 상태를 나타내는 변수
+                        let liked2 = false; // 두 번째 좋아요 상태를 나타내는 변수
+                        let likeCount = 0;   // 좋아요 개수를 저장하는 변수
                     
-                        function like() {
-                            const likeButton = document.getElementById('likeButton');
+                        function like(buttonId) {
+                            const button1 = document.getElementById('button1');
+                            const button2 = document.getElementById('button2');
                             const likeCountElement = document.getElementById('likeCount');
                     
-                            if (!liked) {
-                                // 좋아요 버튼을 빨간색으로 변경
-                                likeButton.classList.add('liked');
-                                // 좋아요 개수를 증가
-                                likeCount++;
-                                // 좋아요 개수 업데이트
-                                likeCountElement.textContent = likeCount;
-                            } else {
-                                // 좋아요 버튼을 원래 색으로 변경
-                                likeButton.classList.remove('liked');
-                                // 좋아요 개수를 감소
-                                likeCount--;
-                                // 좋아요 개수 업데이트
-                                likeCountElement.textContent = likeCount;
+                            if (buttonId === 'button1') {
+                                liked1 = !liked1;
+                                liked2 = liked1;
+                            } else if (buttonId === 'button2') {
+                                liked2 = !liked2;
+                                liked1 = liked2;
                             }
                     
-                            // 좋아요 상태 변경
-                            liked = !liked;
+                            if (liked1 || liked2) {
+                                // 하나 이상의 버튼이 좋아요 상태인 경우
+                                button1.classList.add('liked');
+                                button2.classList.add('liked');
+                                likeCount++;
+                            } else {
+                                // 두 버튼이 모두 좋아요 상태가 아닌 경우
+                                button1.classList.remove('liked');
+                                button2.classList.remove('liked');
+                                likeCount--;
+                            }
+                    
+                            // 좋아요 개수 업데이트
+                            likeCountElement.textContent = likeCount;
                         }
                     </script>
                 </div>
@@ -318,7 +324,8 @@
                     <br>
                 </div>
                 <div class="btns-con">
-                    <button class="goodbtn"><div onclick="like()" class="like-button" id="likeButton">&#10084;</div><span id="likeCount">0</span></button>
+                    
+                    <button class="goodbtn"><div onclick="like('button2')" class="like-button" id="button2">&#10084;</div><span id="likeCount">0</span></button>
                     <button class="buybtn">예약 구매하기</button>
 
                 </div>
