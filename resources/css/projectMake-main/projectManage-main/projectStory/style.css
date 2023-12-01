@@ -1,0 +1,116 @@
+* {
+    font-family: Poppins;
+    text-decoration: none;
+}
+
+
+.back-board {
+    box-shadow: 0px 10px 60px rgba(225.83437621593475, 236.193745136261, 248.62500607967377, 0.5);
+    background-color: #fff;
+    width: 1000px;
+    height: 1800px;
+    border-radius: 30px;
+    padding-bottom: 50px;
+    margin: 20px 0 100px 100px;
+}
+
+/* 제출하기 */
+.project-start {
+    background-color: #F37D1D;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 0 10px;
+    width: 250px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: 10vh;
+}
+
+/* 타이틀 */
+.category-text {
+    top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 10vh;
+    margin-top: 10vh;
+}
+
+.category-sub-text {
+    font-size: 13px;
+    color: #333;
+    margin-left: 10vh;
+    margin-top: 2vh;
+}
+
+.greeting-sub-text {
+    font-size: 13px;
+    color: #333;
+    margin-left: 20vh;
+    margin-top: 2vh;
+    margin-left: 20vh;
+}
+
+/* 타이틀 옆 별 */
+.greeting-text-star {
+    font-size: 15px;
+    color: red;
+}
+
+/* 소개 영상, 사진 */
+.introduce-container {
+    display: flex;
+    margin-left: 10vh;
+}
+
+.introduce-video {
+    border: 1px solid #b9b9b9;
+    border-radius: 5px;
+    width: 170px;
+    height: 50px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.introduce-video p {
+    font-size: 15px;
+    height: 100%;
+}
+
+.introduce-image {
+    border: 1px solid #b9b9b9;
+    border-radius: 5px;
+    width: 170px;
+    height: 50px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.introduce-image p {
+    font-size: 15px;
+    height: 100%;
+}
+
+.introduce-text-container {
+    width: 500px;
+    height: 250px;
+    background-color: #F37D1D;
+    margin-left: 10vh;
+    border-radius: 10px;
+    color: #fff;
+    align-items: center;
+}
+
+.introduce-text-title {
+
+}
+
+.introduce-text-list {
+
+}
