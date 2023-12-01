@@ -410,21 +410,12 @@
 
 
         				/* 중간영역 시작 */
-
-				/* 마이페이지 */
-				.title {
-					list-style-type: none;
-					padding: 23px;
-					font-size: 30px;
-				}
-
-
 				.middle {
 					width:1060px;
 					height:590px;
 					position:absolute;
 					left:150px;
-					top:0px					
+					top:0px;				
 				}
 
 
@@ -462,7 +453,7 @@
 				/* 내용작성 글상자 */
 				textarea {
 					width:1059px;
-					height:500px;
+					height:250px;
 					border: none;
 					resize: none;
 					font-size: 30px;
@@ -527,9 +518,9 @@
 					color:rgba(181.09426975250244, 183.07396352291107, 192.31249898672104, 1);
 					width:100px;
 					height:18px;
-					position: relative;
+					position:absolute;
 					left:410px;
-					top:23px;
+					top:190px;
 					font-family:Poppins;					
 					font-size:20px;	
 				}
@@ -606,8 +597,9 @@
 					
 				}
 
+
 				
-				.submitbtn button{
+				.submitbtn1 button {
 					/* 버튼의 높이와 너비를 조정하여 크게 만듭니다. */
 					width: 110px;
 					padding: 7px 10px ;
@@ -637,11 +629,51 @@
 
 					position:absolute;
 
-					left: 430px;
+					left: 750px;
 
-					top: 520px;
+					top: 30px;
 				
 				}
+
+
+
+                .submitbtn2 button {
+					/* 버튼의 높이와 너비를 조정하여 크게 만듭니다. */
+					width: 110px;
+					padding: 7px 10px ;
+				
+				
+					/* 배경색을 주황색으로 설정합니다. */
+					background-color: orange;
+				
+					/* 글자 색을 변경합니다. */
+					color: white;
+				
+					/* 글자 크기를 크게 설정합니다. */
+					
+				
+					/* 모서리를 둥글게 만듭니다. */
+					border-radius: 9px;
+				
+					/* 테두리를 없앱니다. */
+					border: none;
+				
+					/* 버튼 안의 텍스트를 가운데 정렬합니다. */
+					text-align: center;
+				
+					/* 버튼 안의 텍스트의 여백을 조정합니다. */
+					
+					margin: 15px;
+
+					position:absolute;
+
+					left: 910px;
+
+					top: 30px;
+				
+				}
+
+
 				
 				.submitbtn button:hover{
 					background-color: darkorange;
@@ -651,3 +683,10 @@
 					color: black;
 				}
 				
+				
+				/* 마이페이지 */
+				.title {
+					list-style-type: none;
+					padding: 23px;
+					font-size: 30px;
+				}

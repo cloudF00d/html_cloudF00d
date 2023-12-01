@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>userQnA-AnswerRE</title>
-    <link rel="stylesheet" href="/resources/css/QnA/QnAanswerRE.css">
+    <title>userSupportWrite</title>
+    <link rel="stylesheet" href="/resources/css/support/supprotWrite.css">
     <link rel="stylesheet" href="/resources/css/footer/css.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
 
         <!-- 로고 이미지 -->
-            <img src="/resources/images/01_logoimg/textLogoNone.png" alt="로고" width="100" class="logo-image">
+            <img  src="/resources/images/01_logoimg/textLogoNone.png" alt="로고" width="100" class="logo-image">
         
         
             <!-- 상단 메뉴 -->
@@ -71,116 +70,107 @@
                 <a href="#">프로젝트 시작하기</a>
             </div>     
             </header>
+
+            <div class="sideBar">
         
-        
+                <!-- 사이드바 메뉴 -->
             
-        
-        
-                    <!-- 사이드바 배경 -->
-        <div class="sideBar">
-        
-            <!-- 사이드바 메뉴 -->
-        
-            
-            <div class="sideBar-menu">
-                <strong><div class="title">마이페이지</div></strong>
                 
-                <div id="navSide">
-                    <ul class="sideBar-toggle">
-                        <li><a href="#">내정보관리</a><br>
-                            <ul class="sub">
-                                    <li><a href="#">개인정보 변경</a>
-                                    <li><a href="#">회원탈퇴 </a>
-                                    <li><a href="/view/changePage/sellerPage.html">판매자 전환</a>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="sideBar-toggle">
-                        <li><a href="#">장바구니</a>
-                            <ul class="sub">
-                                <li><a href="#">나의 펀딩 리스트</a>
-                                <li><a href="#">관심 펀딩 리스트</a>
-                            </ul>
-                        </li>
-                    </ul>
-                    <strong><li><a href="/view/userQnA/userMainPage/userQnAmainpage.html">QnA</a></li></strong>
-                    <li><a href="/view/userDeliver/userMainPage/userDeliverMainPage.html">배송현황</a></li>
-                    <li><a href="#">게시판</a></li>
-
-
-                </div>
-                    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-                    <script type="text/javascript">
-                        $(document).ready(function () {
-                            $("#navSide ul.sub").hide();
-                            $("#navSide ul.sideBar-toggle li").click(function () {
-                                $("ul", this).slideToggle("normal");
+                <div class="sideBar-menu">
+                    <strong><div class="title">마이페이지</div></strong>
+                    
+                    <div id="navSide">
+                        <ul class="sideBar-toggle">
+                            <li><a href="#">내정보관리</a><br>
+                                <ul class="sub">
+                                        <li><a href="#">개인정보 변경</a>
+                                        <li><a href="#">회원탈퇴 </a>
+                                        <li><a href="/view/changePage/userChange.html">구매자 전환</a>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="sideBar-toggle">
+                            <li><a href="#">장바구니</a>
+                                <ul class="sub">
+                                    <li><a href="#">나의 펀딩 리스트</a>
+                                    <li><a href="#">관심 펀딩 리스트</a>
+                                </ul>
+                            </li>
+                        </ul>
+                        <li><a href="/view/sellerQnA/sellerMainPage/sellerQnAmainpage.html">QnA</a></li>
+                        <li><a href="/view/sellerDeliver/sellerMainPage/sellerDeliverMainPage.html">배송현황</a></li>
+                        <li><a href="#">게시판</a></li>
+    
+    
+                    </div>
+                        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                $("#navSide ul.sub").hide();
+                                $("#navSide ul.sideBar-toggle li").click(function () {
+                                    $("ul", this).slideToggle("normal");
+                                });
                             });
-                        });
-                    </script>
-        
-                        <div class="sideBar-adver">
-                            <div class="sideBar-adver-back"></div>
-                            <span class="sideBar-adver-text">요금제를 업그레이드하고
-                                더 많은 광고기회를 얻으세요</span>
-                            <div class="sideBar-adver-button">
-                                <div class="sideBar-adver-button-back"></div>
-                                <span class="sideBar-adver-button-text">지금 업그레이드!</span>
+                        </script>
+            
+                            <div class="sideBar-adver">
+                                <div class="sideBar-adver-back"></div>
+                                <span class="sideBar-adver-text">요금제를 업그레이드하고
+                                    더 많은 광고기회를 얻으세요</span>
+                                <div class="sideBar-adver-button">
+                                    <div class="sideBar-adver-button-back"></div>
+                                    <span class="sideBar-adver-button-text">지금 업그레이드!</span>
+                                </div>
                             </div>
-                        </div>
-            </div>       
+                </div>       
+            
+            </div>
+
+
+
+
+    <!-- 미들 -->
+
+
+    
+    <div class="middle_box">
         
-        </div>
+        <div class="middle">
 
-
-
-        <div class="middle_box">
-        
-            <div class="middle">
-            <!-- 가운데 컨텐츠 -->
             <div class="first">
                 
-                <span>QnA</span>
+                <span>고객센터</span>
             </div>
-        
-            <div>
-                <a href="#"><img class="logo1" src="/resources/images/textlogonone_2.png" alt=""></a>
-            </div>
-            
-            <div class="submitbtn1"><button type="submit">수정하기</button></div>
-            <div class="submitbtn2"><button type="submit">삭제하기</button></div>
-
             <div class="box">
-                <span class="box1">작성번호 : 1</span>
-                <span class="box1">작성자: 김민*</span>
-                <span class="box2">작성일자: 23 / 11 / 20               
-                        <!-- <script>
+                <span class="box2">작성일자                    
+                        <script>
                             date = new Date().toLocaleDateString();
                             document.write(date);
-                        </script> -->
+                        </script>
                 </span>
             </div>
 
             <form action="" method="post">
                 <div class="wirte_title">제목 </div>
-                <div class="project_title">프로젝트명</div>
-                <div class="seller_name">판매자</div>
-                <div class="title_detail">풍미가 좋은 드라이에이징 삼겹살</div>
-                <div class="project_detail">풍미가 좋은 드라이에이징 삼겹살</div>
-                <div class="seller_detail">황황도축시장</div>
+                <div class="title_detail"><input placeholder="제목을 입력해주세요"></div>
                 <div class="bar"></div>
-
-                <div class="quest1">
-                <div class="detail" >얼마나 보관할 수 있나요?? </div>
+                <div class="quest">                
+                    <div class="detail" ><textarea style = "background-color:transparent" placeholder="내용을 입력해 주세요." ></textarea></div>
+                    <div class="submitbtn"><button type="submit">등록하기</button></div>
                 </div>
-
-                <div class="quest2"></div>
-                
             </form>            
 
 
-            </div>
+
         </div>
+        
+    </div>
+
+
+
+
+
+
 
 
 
@@ -208,9 +198,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
 
 
-
+        
 </body>
 </html>

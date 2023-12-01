@@ -409,8 +409,9 @@
 		}
 
 
-        				/* 중간영역 시작 */
 
+        				/* 중간영역 시작 */
+			
 				/* 마이페이지 */
 				.title {
 					list-style-type: none;
@@ -428,35 +429,23 @@
 				}
 
 
-				/* 내용작성 완료 박스*/
-				.quest1 { 
+				/* 내용작성 박스*/
+				.quest { 
 					background-color:whitesmoke;
 					border-top: 1px solid #ddd; 
 					width:1059px;
-					height:250px;
+					height:503px;
 					position:absolute;
 					left:65.5px;
 					top:277px;				
 				}
-
-				.quest2 { 
-					background-color:whitesmoke;
-					border-top: 1px solid #ddd; 
-					width:1059px;
-					height:250px;
-					position:absolute;
-					left:65.5px;
-					top:580px;				
-				}
-
 
 				
 					.detail{				
 					border-top: none; 
 					position: relative;
 					padding-left: 0px;
-					padding-top: 0px;
-                    font-size: 20px;					
+					padding-top: 0px;					
 				}
 
 				/* 내용작성 글상자 */
@@ -527,9 +516,9 @@
 					color:rgba(181.09426975250244, 183.07396352291107, 192.31249898672104, 1);
 					width:100px;
 					height:18px;
-					position: relative;
+					position:relative;
 					left:410px;
-					top:23px;
+					top: 41px;
 					font-family:Poppins;					
 					font-size:20px;	
 				}
@@ -605,6 +594,7 @@
 					justify-content: right;
 					
 				}
+
 
 				
 				.submitbtn button{

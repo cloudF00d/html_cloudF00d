@@ -710,7 +710,7 @@ td a{
         position:absolute;
         left:-100px;
         top:40px;
-        background-image:url(./01_logoImage/logoNon.png);
+        background-image:url(/resources/images/01_logoimg/logoNone.png);
         background-repeat:no-repeat;
         background-size:cover;
     }
