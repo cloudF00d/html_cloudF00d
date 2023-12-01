@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 제이쿼리 -->
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- 폰트패밀리: Poppins -->
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <script src="/resources/js/header.js"></script>
     <script src="/resources/js/sideBar.js"></script>
+    <!-- 항상 변경 해야할 js 링크 -->
     <script src="/resources/js/projectMake-main/projectManage/projectManage.js"></script>
     <link rel="stylesheet" href="/resources/css/header/css.css">
     <link rel="stylesheet" href="/resources/css/sideBar/css.css">
     <link rel="stylesheet" href="/resources/css/footer/css.css">
+    <!-- 항상 변경 해야할 css 링크 -->
     <link rel="stylesheet" href="/resources/css/projectMake-main/projectManage-main/projectManage/css.css">
 
     <title>projectMake</title>
@@ -26,7 +30,7 @@
         <!-- 상단 메뉴 -->
         <nav>
             <ul>
-                <li><a href="#">홈</a></li>
+                <li><a href="/resources/view/main.html">홈</a></li>
                 <li><a href="#">프로젝트</a></li>
                 <li><a href="#">펀딩</a></li>
                 <li><a href="#">도움말</a></li>
@@ -64,7 +68,7 @@
 
         <!-- 프로젝트 시작하기 >>> 나가기 -->
         <div class="project-button">
-            <a href="#">나가기</a>
+            <a href="/resources/view/main.html">나가기</a>
         </div>
     </header>
 
@@ -143,31 +147,31 @@
            
                 <div class="folder-box">
                     <div class="folder-background">
-                        <span class="folder-left1">작성 완료</span>
+                        <span class="folder-left1">작성 대기</span>
                         <span class="folder-left2">요금제 선택</span>
-                        <span class="folder-right">작성하기</span>
+                        <a class="folder-right" href="/view/projectMake/projectManage/payChoice.html">작성하기</a>
                     </div>
                 </div>
                 <br><br><br><br><br><br><br><br><br><br>
                 <div class="folder-box">
                     <div class="folder-background">
-                        <span class="folder-left1">작성 완료</span>
+                        <span class="folder-left1">작성 대기</span>
                         <span class="folder-left2">프로젝트 정보</span>
-                        <span class="folder-right">작성하기</span>
+                        <a class="folder-right" href="/view/projectMake/projectManage/projectInfo.html">작성하기</a>
                     </div>
                 </div>
                 <br><br><br><br><br><br><br><br><br><br>
                 <div class="folder-box">
                     <div class="folder-background">
-                        <span class="folder-left1">작성 완료</span>
+                        <span class="folder-left1">작성 대기</span>
                         <span class="folder-left2">기본 정보</span>
-                        <span class="folder-right">작성하기</span>
+                        <a class="folder-right" href="/view/projectMake/projectManage/basicInfo.html">작성하기</a>
                     </div>
                 </div>
                 <br><br><br><br><br><br><br><br><br><br>
                 <div class="folder-box">
                     <div class="folder-background">
-                        <span class="folder-left1">작성 완료</span>
+                        <span class="folder-left1">작성 대기</span>
                         <span class="folder-left2">스토리 작성</span>
                         <span class="folder-right">작성하기</span>
                     </div>
@@ -175,7 +179,7 @@
                 <br><br><br><br><br><br><br><br><br><br>
                 <div class="folder-box">
                     <div class="folder-background">
-                        <span class="folder-left1">작성 완료</span>
+                        <span class="folder-left1">작성 대기</span>
                         <span class="folder-left2">정책</span>
                         <span class="folder-right">작성하기</span>
                     </div>
@@ -183,7 +187,7 @@
                 <br><br><br><br><br><br><br><br><br><br>
                 <div class="folder-box">
                     <div class="folder-background">
-                        <span class="folder-left1">작성 완료</span>
+                        <span class="folder-left1">작성 대기</span>
                         <span class="folder-left2">메이커 정보</span>
                         <span class="folder-right">작성하기</span>
                     </div>
@@ -191,6 +195,24 @@
                 <br><br><br><br><br><br><br><br><br><br>
           
 
+                
+<!-- 제출 로직, 스크립트 -->
+<script>
+    function submitForm() {
+
+
+        // 제출로직 추가
+
+        setTimeout(function () {
+
+            document.querySelector('.folder-left1').textContent = '작성 완료';
+            document.querySelector('.folder-right').textContent = '제출 완료';
+        })
+            .catch(error => {
+                console.error('제출 실패:', error);
+            });
+    }
+</script>
 
 
 
@@ -252,8 +274,8 @@
                   </span>
                     <div class=pop-button-box>
                       <div class="pop-button-box-in"></div>
-                      <div class=pop-button>
-                        <span  class="pop-button-text">제출하기</span>
+                      <div class=pop-button> 
+                        <a class="pop-button-text" href="">제출하기</a>
                     </div>
                     </div>
                   </div>
