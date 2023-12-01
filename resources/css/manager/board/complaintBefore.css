@@ -3,6 +3,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+.searchleft1{
+    margin-right: 20px;
+}
 
 a:link, a:visited{
 	text-decoration: none;
@@ -11,35 +14,52 @@ a:link, a:visited{
 li{
 	list-style: none;
 }
-/* header{
-	background-color: aqua;
-	height: 200px;
-	width: 100%;
-} */
-/* footer{
-	background-color: aqua;
-	height: 200px;
-	width: 100%;
-	position: absolute;
-	
-} */
+
+
 .logo1 {
     width: 140px; /* 원하는 너비로 설정하세요. */
     height: auto; /* 높이는 자동으로 조정됩니다. */
     margin-top: 40px;
 }
-.black-link,
-.black-link:visited {
-    color: black;
-    text-decoration: none; /* 밑줄 제거 */
+#CRUDcontainer{
+    width: 200px;
+    display: flex;
+    /* vertical-align: center; */
+    align-items: baseline;
+    justify-content:right;
 }
 
-.iconlogo {
-    position: relative;
-    top: 6px; /* 아이콘을 아래로 5px 이동 */
-    
+#image{
+    display: flex;
+    justify-content: space-between;
+}
+#delete{
+    margin-top: 90px;
+    border:solid;
+    border-radius: 6px;
+    border-width: 1px;
+    /* float:inline-end; */
+    /* width: 50px; */
+    /* vertical-align: center; */
+    /* text-align: center; */
+    /* height: 40px; */
+    /* background-color: #f90; */
+    padding-left : 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-right: 20px;
+
+}
+#clear{
+    background-color: #f90;
 }
 
+.first{
+    font-size: 30px;
+    font-weight: 1000;
+    margin-top: 40px;
+}
 .pagination {
     display: flex;
     justify-content: center;
@@ -72,88 +92,10 @@ li{
     background-color: darkorange;
     cursor: pointer;
 }
-.main{
-    width: 100%;
-}
-
-table {
-    border-collapse: collapse; 
-    /* 테이블 셀 경계를 합침 */
-    width: 100%; 
-    /* 테이블이 부모 요소에 가득 차도록 함 */
-    /* border-spacing: 50px; */
-    margin: 0% 5% 5% 0%;
-}
-
-th, td {
-    border-top: 1px solid #ddd; /* 상단에만 회색 선 추가 */
-    border-bottom: 1px solid #ddd; /* 하단에만 회색 선 추가 */
-    padding: 20px; /* 셀 안의 여백 설정 */
-    text-align:center; /* 셀 안의 텍스트를 왼쪽 정렬 */
-    
-    
-}
-
-th {
-    /* background-color: #f2f2f2; 헤더 셀에 연한 회색 배경색 추가 */
-    border-top: none; /* 헤더 셀의 상단 선 제거 */
-    border-bottom: 1px solid #ddd; /* 헤더 셀의 하단에만 회색 선 추가 */
-    
-}
-
-td a{
-    color: black;
-}
-
-
-
-.CRUDcontainer{
-    display: flex;
-    /* margin-top: 40px; */
-    justify-content: space-between;
-}
-.CRUD{
-    display: flex;
-    justify-content: space-between;
-    height: 30px;
-    align-items: center;
-    margin-top: 40px;
-
-}
-.stop{
-    margin-right: 20px;
-    
-    
-}
-.update{
-    margin-right: 20px;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-
-    padding-inline-start: 5px;
-    padding-inline-end: 5px;
-
-    color: darkorange;
-
-
-}
-.delete{
-    margin-right: 20px;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-
-    padding-inline-start: 5px;
-    padding-inline-end: 5px;
-}
-
-
 
 .container {
     display: flex;
-    justify-content:space-between; 
-    /* 컨테이너 내부 요소들을 좌측과 우측에 배치 */
+    justify-content: space-between; /* 컨테이너 내부 요소들을 좌측과 우측에 배치 */
     width: 100%;
     height: 1020px;
     
@@ -164,16 +106,15 @@ td a{
     flex-basis: 380px; /* 왼쪽 영역의 너비를 30%로 설정 */
     flex-shrink: 0;
             /* 음영 효과 설정 */
-    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+    /* box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1); */
 }
-
 .middle {
     margin-left: 0%;
 
     margin-top: 4%;
 
     
-    flex-basis: 1200px; 
+    flex-basis: 900px; 
     /* 가운데 영역의 너비를 50%로 설정 */
     flex-shrink: 0;
     
@@ -181,88 +122,154 @@ td a{
     /* box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1); */
 }
 
+
+#link{
+    cursor: pointer;
+}
 .right {
     flex-basis: 192px; /* 오른쪽 영역의 너비를 20%로 설정 */
 }
-.searchDetail{
-    font-size: 16px;
+
+
+.box1{
+    width: 140px;
+    background-color: rgb(241, 241, 241);
+    color: gray;
+    border-radius: 10px;
+    padding: 7px;
+    margin: 15px;
+    text-align: center;
 }
-.buyList{
-    font-size: 14px;
+.box2{
+    width: 200px;
+    color: gray;
+    background-color:  rgb(241, 241, 241);
+    border-radius: 10px;
+    padding: 7px;
+    margin: 15px;
+    text-align: center;
+}
+.box3{
+    width: 100px;
+    color: rgb(241, 241, 241);
+    background-color: grey;
+    border-radius: 10px;
+    padding: 7px;
+    margin: 15px;
+    text-align: center;
 }
 
-.searchcontainer {
+
+
+.box{
     display: flex;
-    justify-content: space-between; 
-    /* 좌우에 요소를 배치 */
-    width: 100%;
-    margin-top: 40px;
+    justify-content: right;
+    
 }
 
-.searchright {
-     /* 우측 영역의 너비를 30%로 설정 */
-    display: flex; /* 내부 요소들을 가로로 배치 */
-    justify-content: flex-end; /* 내부 요소를 오른쪽으로 정렬 */
-    align-items: center; /* 내부 요소를 세로 방향 가운데 정렬 */
-    margin-left: auto; /* 오른쪽으로 이동시킴 */
+
+.title{
+    color: lightgray;
+    border-top: none; /* 헤더 셀의 상단 선 제거 */
+    border-bottom: 1px solid #ddd; /* 헤더 셀의 하단에만 회색 선 추가 */
+    padding: 15px 0;
+    position: relative;
+    padding-left: 140px;
+    
 }
-.searchleft1{
-    margin-left: 40px;
-}
-.searchleft2{
-    margin-left: 15px;
+.title input{
+
+    width: 500px;
+    
+    padding: 4px;
+    
 }
 
-#newcolumn{
+.detail{
+    color: lightgray;
+    border-top: none; /* 헤더 셀의 상단 선 제거 */
+    border-bottom: 1px solid #ddd; /* 헤더 셀의 하단에만 회색 선 추가 */
+    padding: 15px 0;
+    position: relative;
+    padding-left: 70px;
+
+    display: flex;
+    height: 200px;
+}
+#details{
+    margin-right: 30px;
+    width: 120px;
+
+
+}
+#details2{
+    height: 100%;
+    width : 80%;
+    color: #333;
+    
+
+}
+#writer{
+    
+    height: 20%;
+    margin-bottom: 1%;
+}
+
+#color{
+    color: gray;
+    
+}
+
+.detail label{
+
+    position: relative;
+    bottom: 157px;
+
+    
+}
+.detail textarea{
+    font-size: 15px;
+
+    width: 700px;
+}
+
+.answer{
+    color: lightgray;
+    border-top: none; /* 헤더 셀의 상단 선 제거 */
+    border-bottom: 1px solid #ddd; /* 헤더 셀의 하단에만 회색 선 추가 */
+    padding: 15px 0;
+    position: relative;
+    padding-left: 70px;
+}
+
+.answer label{
+
+    position: relative;
+    bottom: 157px;
+
+    
+}
+.answer textarea{
+    font-size: 15px;
+
+    width: 700px;
+}
+
+
+.submitbtn{
     visibility: hidden;
+    display: flex;
+    justify-content: right;
 }
 
-#new{
-    color: red;
-}
-.first{
-    font-size: 30px;
-    font-weight: 1000;
-    margin-top: 40px;
-}
-
-/* 좌측 영역 시작*/
-
-.sidebarName{
-    font-size: 25px;
-    padding: 30px;
-    
-    font-weight: bold;
-    
-}
-
-.move {
-
-    float: right;
-    padding-right: 20px;
-}
-.sidebar a, 
-.sidebar a:visited{
-    color: rgb(134, 132, 132);
-    padding-left: 20px;
-    
-    
-}
-
-
-.sidebar li{
-    color: rgb(134, 132, 132);
-    padding: 25px;
-}
-
-
-.close{
+.submitbtn button{
     /* 버튼의 높이와 너비를 조정하여 크게 만듭니다. */
     width: 110px;
-    padding: 7px 18px ;
+    padding: 7px 10px ;
+
 
     /* 배경색을 주황색으로 설정합니다. */
-    background-color: lightgray;
+    background-color: orange;
 
     /* 글자 색을 변경합니다. */
     color: white;
@@ -271,45 +278,26 @@ td a{
     
 
     /* 모서리를 둥글게 만듭니다. */
-    border-radius: 5px;
+    border-radius: 9px;
 
     /* 테두리를 없앱니다. */
     border: none;
 
     /* 버튼 안의 텍스트를 가운데 정렬합니다. */
     text-align: center;
-    
 
+    /* 버튼 안의 텍스트의 여백을 조정합니다. */
+    
+    margin: 15px;
 
 }
-.ing{
-        /* 버튼의 높이와 너비를 조정하여 크게 만듭니다. */
-       
-        padding: 7px 10px ;
-    
-        /* padding: 0%; */
 
-        /* 배경색을 주황색으로 설정합니다. */
-        background-color: orange;
-    
-        /* 글자 색을 변경합니다. */
-        color: white;
-    
-        /* 글자 크기를 크게 설정합니다. */
-        
-    
-        /* 모서리를 둥글게 만듭니다. */
-        border-radius: 5px;
-    
-        /* 테두리를 없앱니다. */
-        border: none;
-    
-        /* 버튼 안의 텍스트를 가운데 정렬합니다. */
-        text-align: center;
-    
-        /* 버튼 안의 텍스트의 여백을 조정합니다. */
-        
+.submitbtn button:hover{
+    background-color: darkorange;
+}
 
+.black-link{
+    color: black;
 }
 
 
@@ -563,8 +551,6 @@ td a{
         background-image: linear-gradient(0deg, rgba(249.38867390155792, 202.0311614871025, 163.5030072927475, 1) 0%, rgba(243.00000071525574, 125.00000014901161, 29.000000171363354, 1) 100%);
         width: 223.856201171875px;
         height: 134.313720703125px;
-        
-        
         left: 0px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
@@ -717,5 +703,3 @@ td a{
         background-repeat:no-repeat;
         background-size:cover;
     }
-
-

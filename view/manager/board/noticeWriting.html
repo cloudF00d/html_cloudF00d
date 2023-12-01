@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>answer</title>
-    <link rel="stylesheet" href="../resources/css/BNDing.css">
+    <title>공지사항 글쓰기</title>
+    <link rel="stylesheet" href="../../../resources/css/manager/board/noticeWriting.css">
 </head>
 <body>
     <header>
         <!-- 로고 이미지 -->
-		<img src="../../../../../manager/images/headerLogo.png" alt="로고" width="100" class="logo-image">
+		<img src="../../../resources/images/01_logoimg/logoNone.png" alt="로고" width="100" class="logo-image">
 
 	<!-- 상단 메뉴 -->
 	<nav>
@@ -55,8 +55,7 @@
 	<div class="login-signup">
 		<nav>
 			<ul>
-				<li><a href="#">로그인</a></li>
-				<li><a href="#">회원가입</a></li>
+				<li><a href="../search/userMain.html">관리자페이지</a></li>				<li><a href="#">로그아웃</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -70,7 +69,7 @@
     
 
     <div class="container">
-         <!-- 사이드바 배경 -->
+          <!-- 사이드바 배경 -->
 <div class="sideBar">
 
 	<!-- 사이드바 메뉴 -->
@@ -80,42 +79,43 @@
 			<ul class="sideBar-toggle">
 				<li><a href="#">회원 조회</a><br>
 					<ul class="sub">
-						<li><a href="../../../../../manager/searchMember/searchUser/searchUserMain/view/SUM.html">사용자 조회</a></li>
-						<li><a href="../../../../../manager/searchMember/searchProducer/searchProducerMain/view/SPM.html">판매자 조회</a></li>
-						<li><a href="../../../../../manager/searchMember/searchComplaintMem/searchComplaintMain/view/SCM.html">경고 회원 조회</a></li>
+						<li><a href="../search/userMain.html">사용자 조회</a></li>
+						<li><a href="../search/sellerMain.html">판매자 조회</a></li>
+						<li><a href="../search/complaintMain.html">경고 회원 조회</a></li>
 					</ul>
 				</li>
 			</ul>
-            <ul class="sideBar-toggle">
+            <!-- <ul class="sideBar-toggle">
 				<li><a href="#">신고 내역</a><br>
 					<ul class="sub">
 						<li><a href="../../../../../manager/manageComplaint/complaintUser/complaintUserMain/view/CUM.html">사용자 신고</a></li>
 						<li><a href="../../../../../manager/manageComplaint/complaintProducer/complaintProducerMain/view/CPM.html">판매자 신고</a></li>
 					</ul>
 				</li>
-			</ul>
+			</ul> -->
             <ul class="sideBar-toggle">
 				<li><a href="#">프로젝트 관리</a><br>
 					<ul class="sub">
-						<li><a href="../../../../../manager/manageProject/newProject/NewProjectMain/view/NPM.html">신규 신청</a></li>
-						<li><a href="../../../../../manager/manageProject/refundingProject/refundingProjectMain/view/NPM.html">재신청</a></li>
-						<li><a href="../../../../../manager/manageProject/declineProject/declineProjectMain/view/NPM.html">반려 프로젝트</a></li>
-						<li><a href="../../../../../manager/manageProject/complaintProject/complaintProjectMain/view/CPM.html">신고 프로젝트</a></li>
+						<li><a href="../project/newMain.html">신규 신청</a></li>
+						<li><a href="../project/reMain.html">재신청</a></li>
+						<li><a href="../project/declineMain.html">반려 프로젝트</a></li>
+						<li><a href="../project/complaintMain.html">신고 프로젝트</a></li>
 					</ul>
 				</li>
 			</ul>
             <ul class="sideBar-toggle">
 				<li><a href="#">수익관리</a><br>
 					<ul class="sub">
-						<li><a href="../../../../../manager/manageRevenue/projectList/projectListMain/view/RM.html">프로젝트 목록</a></li>
+						<li><a href="../revenue/main.html">프로젝트 목록</a></li>
 					</ul>
 				</li>
 			</ul>
             <ul class="sideBar-toggle">
 				<li><a href="#">게시판 관리</a><br>
 					<ul class="sub">
-						<li><a href="../../../../../manager/manageBoard/ManageNotificationBoard/ManageNotificationBoardMain/view/CPM.html">공지사항</a></li>
-						<li><a href="../../../../../manager/manageBoard/ManageInquiryBoard/ManageInquiryBoardMain/view/CPM.html">고객센터</a></li>
+						<li><a href="../board/noticeMain.html">공지사항</a></li>
+						<li><a href="../board/inquiryMain.html">문의사항</a></li>
+						<li><a href="../board/complaintMain.html">신고 게시판</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -146,20 +146,20 @@
         <div class="middle">
             <!-- 가운데 컨텐츠 -->
             <div class="first">
-                <span><a class="black-link" href="#">사용자 신고</a></span>
+                <span><a class="black-link" href="./noticeMain.html">공지사항</a></span>
                 <span><strong>></strong></span>
-                <span>세부내용</span>
+                <span>글 쓰기</span>
             </div>
         
             <div>
-				<a href="#"><img class="logo1" src="../../../../../manager/images/middleLogo.png" alt=""></a>            </div>
+				<a href="#"><img class="logo1" src="../../../resources/images/01_logoimg/textLogoNone.png" alt=""></a>            </div>
             
 
             <div class="box">
                 <span class="box1">작성번호 : 1</span>
-                <span class="box1">작성자:김민*</span>
+                <!-- <span class="box1">작성자:김민*</span> -->
                 <span class="box2">작성일자:2023/11/15</span>
-				<span class="box3">답변 전</span>
+				<!-- <span class="box3">답변 전</span> -->
             </div>
             
             <div>
@@ -223,8 +223,8 @@
 	  서울 종로구 인사동길 12 대일빌딩 7층 클라우드 푸딩
 	  </span>
 	</div>
-	<img class="footer-logo" src="../../../../../manager/images/headerLogo.png">
-		  </div>
+	<img class="footer-logo" src="../../../resources/images/01_logoimg/logoNone.png">
+</div>
 		</div>
 	  </div>
     </footer>
