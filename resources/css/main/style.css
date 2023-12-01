@@ -401,12 +401,13 @@ article {
     position: absolute;
     left: 0px;
     top: 0px;
+    
 }
 
 .footer-group {
     height: 163px;
     position: absolute;
-    left: 500px;
+    left: 800px;
 }
 
 .footer-group-design {
@@ -435,7 +436,6 @@ article {
     position: absolute;
     left: 0px;
     top: 10px;
-
 }
 
 .footer-up-right {
@@ -469,7 +469,8 @@ article {
     height: 150px;
     margin-top: 15px;
     z-index: 1;
-    margin-left: 20vh;
+    margin-left: 25vh;
+    position: absolute;
 }
 
 /* 첫 번째 정사각형 아이콘 */

@@ -218,29 +218,22 @@
                 </div>
 
                 <script>
-                    // 클릭 이벤트 핸들러 함수
                     function openFileAttachmentPopup() {
-                        // 파일 첨부 팝업을 열도록 코드를 추가합니다.
                         document.getElementById('fileAttachmentPopup').style.display = 'block';
                     }
 
-                    // 파일 첨부 완료 함수
                     function completeFileAttachment() {
-                        // 파일 첨부 정보 가져오기
+
                         var attachedFile = document.getElementById('fileInput').files[0];
 
-                        // 멘트를 변경합니다.
                         document.getElementById('attachmentMessage').innerText = '등록이 완료되었습니다.';
                         document.getElementById('attachedFileName').innerText = '등록 파일명: ' + attachedFile.name;
 
-                        // 파일 첨부 팝업을 닫고 등록 완료 팝업을 엽니다.
                         document.getElementById('fileAttachmentPopup').style.display = 'none';
                         document.getElementById('registrationCompletePopup').style.display = 'block';
                     }
 
-                    // 등록 완료 팝업 닫기 함수
                     function closeRegistrationCompletePopup() {
-                        // 등록 완료 팝업을 닫도록 코드를 추가합니다.
                         document.getElementById('registrationCompletePopup').style.display = 'none';
                     }
 
@@ -265,11 +258,11 @@
                 </script>
 
                 <br><br><br><br><br>
-                <div class="project-start">제출하기</div> 
+                <a class="project-start" href="/view/projectMake/projectManage.html">제출하기</a>
             </div>
 
-           
-          
+
+
 
 
     </div> <!-- back-board -->
