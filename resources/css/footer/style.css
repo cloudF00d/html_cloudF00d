@@ -1,14 +1,7 @@
 /* 푸터 */
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: auto;
-}
-
 .footer {
     width: 100%;
-    height: 200px;
+    height: 198px;
     position: absolute;
 }
 
@@ -17,7 +10,8 @@
     width: 100%;
     height: 230px;
     position: absolute;
-    margin-top: 0px;
+    margin-left: 0;
+    top: 0px;
 }
 
 .footer-left {
@@ -27,12 +21,13 @@
     position: absolute;
     left: 0px;
     top: 0px;
+    
 }
 
 .footer-group {
     height: 163px;
     position: absolute;
-    left: 500px;
+    left: 800px;
 }
 
 .footer-group-design {
@@ -61,7 +56,6 @@
     position: absolute;
     left: 0px;
     top: 10px;
-
 }
 
 .footer-up-right {
@@ -95,5 +89,6 @@
     height: 150px;
     margin-top: 15px;
     z-index: 1;
-    margin-left: 20vh;
+    margin-left: 25vh;
+    position: absolute;
 }
