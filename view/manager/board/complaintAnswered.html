@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신고 게시판 답변완료</title>
     <link rel="stylesheet" href="../../../resources/css/manager/board/complaintAnswered.css">
+    <link rel="stylesheet" href="../../../resources/css/footer/css.css">
+	
+
+	
 </head>
 <body>
+	<script>
+		$(document).ready(function(){
+    // $(#header).load("/header.html");
+    $("#footer").load("../../footer.html");
+		});
+
+	</script>
+
+	
     <header>
         <!-- 로고 이미지 -->
 		<img src="../../../resources/images/01_logoimg/logoNone.png" alt="로고" width="100" class="logo-image">
@@ -36,7 +49,7 @@
 	<!-- 더보기 토글 제이쿼리 -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-	<!-- 더보기 토글 함수 -->
+	 <!-- 더보기 토글 함수 -->
 	<script>
 		$(document).ready(function () {
 			$('#toggle-label').click(function () {
@@ -229,25 +242,11 @@
     </div>
 
 
-    <footer>
-         <!-- Footer -->
-	 <div class=footer>
-		<div class="footer-back"></div>
-		<div class="footer-left"></div>
-		<div class=footer-group>
-		  <div class=footer-group-design><span  class="footer-down">
-	  일부 상품의 경우 와디즈는 통신판매중개자이며 통신판매 당사자가 아닙니다.
-	  해당되는 상품의 경우 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다. </span>
-			<div class=footer-up><span  class="footer-up-right">이메일 상담   abcdefg@gmail.com
-	  유선 상담 1234-5678</span><span  class="footer-up-left">Cloud Fooding 클라우드 푸딩
-	  사업자 등록번호 1234-56-7890
-	  서울 종로구 인사동길 12 대일빌딩 7층 클라우드 푸딩
-	  </span>
+	<div>
+<footer id="footer">
+	</footer>
+
 	</div>
-	<img class="footer-logo" src="../../../resources/images/01_logoimg/logoNone.png">
-		  </div>
-		</div>
-	  </div>
-    </footer>
+    
 </body>
 </html>
