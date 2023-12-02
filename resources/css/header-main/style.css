@@ -1,4 +1,21 @@
-/* header */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    background-size: cover;
+    /* 창 화면에 100%로 배경 이미지 크기 조절 */
+    background-repeat: no-repeat;
+    /* 배경 이미지 반복 없음 */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* 헤더 */
 header {
     background-color: #333;
     color: #fff;
@@ -7,23 +24,22 @@ header {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin: 0;
 }
 
-/* logo - margin */
+/* logo - margin  */
 .logo-image {
     margin-right: auto;
     margin-left: auto;
 }
 
-/* 헤더 메뉴 부모 요소 */
+/* 네비게이션 메뉴 부모 요소 */
 nav {
     text-align: center;
     min-width: 60px;
     min-height: 20px;
 }
 
-/* 헤더 메뉴 목록 */
+/* 네비게이션 메뉴 목록 */
 nav ul {
     list-style: none;
     padding: 0;
@@ -31,22 +47,21 @@ nav ul {
     display: flex;
 }
 
-nav.ul.hidden {
-    display: none;
-}
-
-/* 헤더 메뉴 항목 스타일 */
+/* 네비게이션 메뉴 항목 스타일 */
 nav ul li {
     margin: 0 15px;
-    min-width: 80px;
+    min-width: 60px;
     min-height: 20px;
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    flex-shrink: 0;
+    /* 가로고정 */
+    flex-grow: 0;
+    /* 세로 고정 */
 }
 
-/* 헤더 메뉴 하이퍼링크 스타일 */
+
+/* 네비게이션 메뉴 하이퍼링크 스타일 */
 nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -54,71 +69,80 @@ nav ul li a {
     display: block;
     height: 100%;
     box-sizing: border-box;
+    /* 정확한 패딩값을 주기 위함 */
 }
 
-/* 검색어 - 부모 */
+/* 검색어 - 부모  */
 .search-box {
     background-color: #eee;
     padding: 3px;
     border-radius: 5px;
     display: flex;
     align-items: center;
+    width: 200px;
     margin-right: auto;
-    min-width: 190px;
-    min-height: 20px;
 }
 
 /* 검색어 - 자식 (입력 필드) */
 .search-box input {
     padding: 5px;
-    width: 80%;
+    width: 100%;
+    /* 수정: 입력 필드를 100%로 설정하여 부모에 맞춤 */
     border: none;
     border-radius: 5px;
-    margin-right: auto;
+    margin-right: 5px;
 }
 
-/* 돋보기 */
-.search-box img {
-    width: 18px;
-    height: 18px;
-    margin-right: 5px;
+/* 검색 버튼 스타일 */
+.search-button {
+    background: none;
+    border: none;
     cursor: pointer;
 }
 
-/* 프로젝트 생성 */
+/* 아이콘 스타일 (Font Awesome) */
+.search-button i {
+    font-size: 18px;
+    color: #555;
+}
+
+/* 프로젝트 시작하기  */
 .project-button {
     background-color: #f90;
+    color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
     margin-right: 40px;
     margin-left: auto;
     display: flex;
-    min-width: 120px;
-    min-height: 20px;
 }
 
-/* 프로젝트 생성 버튼 디자인 */
+/* 프로젝트 버튼 디자인 */
 .project-button a {
     background-color: #f90;
     color: #fff;
     text-decoration: none;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+    width: 120px;
 }
 
-/* 더보기 토글 */
+/* 슬라이딩 메뉴  */
+.menu {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: auto; */
+}
+
+/* 더보기 토글 메뉴  */
 .menu-item {
     display: flex;
     align-items: center;
     margin-right: auto;
     margin-left: 22px;
-    z-index: 3;
     min-width: 60px;
     min-height: 20px;
-}
-
-.toggle-label {
-    cursor: pointer;
 }
 
 .menu-content {
@@ -138,6 +162,7 @@ nav ul li a {
     list-style: none;
     padding: 0;
     margin: 0;
+
 }
 
 .menu-content ul li {
@@ -147,5 +172,10 @@ nav ul li a {
 .menu-content a {
     text-decoration: none;
     color: #fff;
+}
 
+.search-box img {
+    width: 18px;
+    height: auto;
+    cursor: pointer;
 }
