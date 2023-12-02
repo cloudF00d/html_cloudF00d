@@ -443,8 +443,8 @@ body {
     width: 1200px;
     height: 1000px;
 	margin-bottom: 50px;
-    background-color: #eee;
-    border: 1px solid red;
+    /* background-color: #eee; */
+    border: 1px solid #eee;
 	margin-top: px; 
 }
 .logo{
@@ -485,7 +485,7 @@ body {
 	border-bottom: 1px solid black;
 	/* margin-top: 10px; */
 	margin-bottom: 5px;
-	background-color: #eee;
+	/* background-color: #eee; */
 	height: 120px;
 	display: flex;
 }
