@@ -18,6 +18,42 @@ li{
     height: auto; /* 높이는 자동으로 조정됩니다. */
     margin-top: 40px;
 }
+#CRUDcontainer{
+    width: 200px;
+    display: flex;
+    /* vertical-align: center; */
+    align-items: baseline;
+    justify-content:right;
+}
+.searchleft1{
+    margin-right: 20px;
+}
+
+#image{
+    display: flex;
+    justify-content: space-between;
+}
+#delete{
+    margin-top: 90px;
+    border:solid;
+    border-radius: 6px;
+    border-width: 1px;
+    /* float:inline-end; */
+    /* width: 50px; */
+    /* vertical-align: center; */
+    /* text-align: center; */
+    /* height: 40px; */
+    /* background-color: #f90; */
+    padding-left : 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-right: 20px;
+
+}
+#clear{
+    background-color: #f90;
+}
 
 .first{
     font-size: 30px;
