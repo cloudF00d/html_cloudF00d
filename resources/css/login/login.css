@@ -11,19 +11,8 @@ a:link, a:visited{
 li{
 	list-style: none;
 }
-header{
-	background-color: aqua;
-	height: 200px;
-	width: 100%;
-}
 
-footer{
-	background-color: aqua;
-	height: 200px;
-	width: 100%;
-	position: absolute;
-	
-}
+
 #wrap{
     width: 100%;
     display: flex;
@@ -101,7 +90,9 @@ footer{
     display: flex;
     justify-content: space-evenly;
     padding: 0;
-    
+}
+.findid a{
+    color: black; /* 링크 기본 색상을 검정색으로 지정 */
 }
 .downpart ul,li{
     padding: 10px;

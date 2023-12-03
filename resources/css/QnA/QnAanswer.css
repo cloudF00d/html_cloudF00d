@@ -396,7 +396,7 @@
 			position:absolute;
 			left:-100px;
 			top:40px;
-			background-image:url(/resources/imege/lcon/logonon_2.png);
+			background-image:url(/resources/images/01_logoimg/logoNone.png);
 			background-repeat:no-repeat;
 			background-size:cover;
 		}
@@ -410,6 +410,15 @@
 
 
         				/* 중간영역 시작 */
+
+				/* 마이페이지 */
+				.title {
+					list-style-type: none;
+					padding: 23px;
+					font-size: 30px;
+				}
+
+
 				.middle {
 					width:1060px;
 					height:590px;
