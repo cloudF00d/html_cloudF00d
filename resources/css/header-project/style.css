@@ -30,6 +30,7 @@ header {
 .logo-image {
     margin-right: auto;
     margin-left: auto;
+    cursor: pointer;
 }
 
 /* 네비게이션 메뉴 부모 요소 */

@@ -1,9 +1,3 @@
-// 팝업 토글
-$(document).ready(function () {
-    $('#toggle-label').click(function () {
-        $('#menu-content').slideToggle(500);
-    });
-});
 
 // 상단 슬라이더
 document.addEventListener('DOMContentLoaded', function () {
