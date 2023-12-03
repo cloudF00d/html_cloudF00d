@@ -7,8 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../resources/css/payment/buypage.css">
 
+    <link rel="stylesheet" href="/resources/css/header-project/css.css">
+    <!-- <link rel="stylesheet" href="/resources/css/sideBar/css.css"> -->
+    <!-- <link rel="stylesheet" href="/resources/css/memberWithdrawal/user.css"> -->
     <link rel="stylesheet" href="/resources/css/footer/css.css">
-    <link rel="stylesheet" href="/resources/css/header/css.css">
 </head>
 
 <body>
@@ -88,13 +90,12 @@
 
                     <div id="counter-container">
                         <div id="counter-controls">
-                            <button class="btn" onclick="decrease()">-</button>
-                            <span id="counter-value">0</span>
-                            <button class="btn" onclick="increase()">+</button>
+                            <button class="btn" onclick="decrease(1)">-</button>
+                            <span id="counter-value1">1</span>
+                            <button class="btn" onclick="increase(1)">+</button>
                         </div>
                         <!-- 휴지통버튼 -->
                         <button class="trash-btn"></button>
-
                     </div>
 
                 </div>
@@ -113,13 +114,12 @@
 
                     <div id="counter-container">
                         <div id="counter-controls">
-                            <button class="btn" onclick="decrease()">-</button>
-                            <span id="counter-value">0</span>
-                            <button class="btn" onclick="increase()">+</button>
+                            <button class="btn" onclick="decrease(2)">-</button>
+                            <span id="counter-value2">1</span>
+                            <button class="btn" onclick="increase(2)">+</button>
                         </div>
                         <!-- 휴지통버튼 -->
                         <button class="trash-btn"></button>
-
                     </div>
 
                 </div>
@@ -242,25 +242,39 @@
 
     </div>
     <script>
-        let counterValue = 0;
-
+        let counterValue1 = 1;
+        let counterValue2 = 1;
+    
         // 증가 함수
-        function increase() {
-            counterValue++;
-            updateCounter();
-        }
-
-        // 감소 함수
-        function decrease() {
-            if (counterValue > 0) {
-                counterValue--;
-                updateCounter();
+        function increase(productNumber) {
+            if (productNumber === 1) {
+                counterValue1++;
+                updateCounter(productNumber);
+            } else if (productNumber === 2) {
+                counterValue2++;
+                updateCounter(productNumber);
             }
         }
-        function updateCounter() {
-            document.getElementById('counter-value').innerText = counterValue;
+    
+        // 감소 함수
+        function decrease(productNumber) {
+            if (productNumber === 1 && counterValue1 > 0) {
+                counterValue1--;
+                updateCounter(productNumber);
+            } else if (productNumber === 2 && counterValue2 > 0) {
+                counterValue2--;
+                updateCounter(productNumber);
+            }
+        }
+    
+        function updateCounter(productNumber) {
+            const counterElement = document.getElementById(`counter-value${productNumber}`);
+            const counterValue = productNumber === 1 ? counterValue1 : counterValue2;
+            counterElement.innerText = counterValue;
         }
     </script>
+     
+ 
 
 
     <footer> <!-- Footer -->
