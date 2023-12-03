@@ -8,6 +8,9 @@ body {
     background-repeat: no-repeat;
     /* 배경 이미지 반복 없음 */
 }
+a {
+	text-decoration: none;
+}
 
 body {
 			margin: 0;
