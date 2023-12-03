@@ -26,6 +26,7 @@ header {
     position: relative;
 }
 
+
 /* logo - margin  */
 .logo-image {
     margin-right: auto;
@@ -123,7 +124,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     text-align: center;
-    width: 120px;
+    width: 135px;
 }
 
 /* 슬라이딩 메뉴  */

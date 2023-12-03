@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+    font-family: poppins;
 }
 
 
@@ -26,19 +27,6 @@ li{
     margin: 0 auto; /* 화면 가운데 정렬 */
 }
 
-header{
-	background-color: aqua;
-	height: 200px;
-	width: 100%;
-}
-
-footer{
-	background-color: aqua;
-	height: 200px;
-	width: 100%;
-	position: absolute;
-	
-}
 
 .left {
     flex-basis: 500px; /* 왼쪽 영역의 너비를 30%로 설정 */
@@ -103,7 +91,52 @@ footer{
 .movetext2{
     margin-left: 123px;
 }
+/* ===========================================================프로필 */
+.profileimg1{
+    width: 200px;
+    position: relative;
+    left: 75px;
+    padding-bottom: 40px;
+}
+.profileimg button{
+    position: relative;
+    right: 86px;
+}
 
+.profilebtn{
+        /* 버튼의 높이와 너비를 조정하여 크게 만듭니다. */
+   
+   height: 31px;
+
+   /* 배경색을 색으로 설정합니다. */
+   background-color: lightgrey;
+
+   /* 글자 색을 변경합니다. */
+   color: white;
+
+    padding: 3px;
+    
+
+   /* 모서리를 둥글게 만듭니다. */
+   border-radius: 5px;
+
+   /* 테두리를 없앱니다. */
+   border: none;
+
+   /* 버튼 안의 텍스트를 가운데 정렬합니다. */
+   text-align: center;
+}
+
+
+.profilebtn:hover{
+    
+        /* 마우스 호버 시 배경색 변경 */
+        background-color: darkorange;
+    
+}
+
+
+/*========================================= 회원정보 변경 버튼*/
 .changeInfobtn button {
    /* 버튼의 높이와 너비를 조정하여 크게 만듭니다. */
    width: 200px;
