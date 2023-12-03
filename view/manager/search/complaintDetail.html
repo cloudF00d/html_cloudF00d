@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>신고 회원 조회 세부정보</title>
-    <link rel="stylesheet" href="../resources/css/SCD.css">
+    <title>경고 회원 조회 세부정보</title>
+    <link rel="stylesheet" href="../../../resources/css/manager/search/complaintDetail.css">
 </head>
 <body>
     <header>
         <!-- 로고 이미지 -->
-        <img src="../../../../../manager/images/headerLogo.png" alt="로고" width="100" class="logo-image">
+        <img src="../../../resources/images/01_logoimg/logoNone.png" alt="로고" width="100" class="logo-image">
 
 	<!-- 상단 메뉴 -->
 	<nav>
@@ -55,8 +55,7 @@
 	<div class="login-signup">
 		<nav>
 			<ul>
-				<li><a href="#">관리자페이지</a></li>
-				<li><a href="#">로그아웃</a></li>
+                <li><a href="../search/userMain.html">관리자페이지</a></li>				<li><a href="#">로그아웃</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -70,52 +69,53 @@
     
 
     <div class="container">
-   <!-- 사이드바 배경 -->
+             <!-- 사이드바 배경 -->
 <div class="sideBar">
 
 	<!-- 사이드바 메뉴 -->
 	<div class="sideBar-menu">
 
-		<div id="navSide">
+<div id="navSide">
 			<ul class="sideBar-toggle">
 				<li><a href="#">회원 조회</a><br>
 					<ul class="sub">
-						<li><a href="../../../../../manager/searchMember/searchUser/searchUserMain/view/SUM.html">사용자 조회</a></li>
-						<li><a href="../../../../../manager/searchMember/searchProducer/searchProducerMain/view/SPM.html">판매자 조회</a></li>
-						<li><a href="../../../../../manager/searchMember/searchComplaintMem/searchComplaintMain/view/SCM.html">신고 회원 조회</a></li>
+						<li><a href="../search/userMain.html">사용자 조회</a></li>
+						<li><a href="../search/sellerMain.html">판매자 조회</a></li>
+						<li><a href="../search/complaintMain.html">경고 회원 조회</a></li>
 					</ul>
 				</li>
 			</ul>
-            <ul class="sideBar-toggle">
+            <!-- <ul class="sideBar-toggle">
 				<li><a href="#">신고 내역</a><br>
 					<ul class="sub">
 						<li><a href="../../../../../manager/manageComplaint/complaintUser/complaintUserMain/view/CUM.html">사용자 신고</a></li>
 						<li><a href="../../../../../manager/manageComplaint/complaintProducer/complaintProducerMain/view/CPM.html">판매자 신고</a></li>
 					</ul>
 				</li>
-			</ul>
+			</ul> -->
             <ul class="sideBar-toggle">
 				<li><a href="#">프로젝트 관리</a><br>
 					<ul class="sub">
-						<li><a href="../../../../../manager/manageProject/newProject/NewProjectMain/view/PNM.html">신규 신청</a></li>
-						<li><a href="../../../../../manager/manageProject/refundingProject/refundingProjectMain/view/PRM.html">재신청</a></li>
-						<li><a href="../../../../../manager/manageProject/declineProject/declineProjectMain/view/PDM.html">반려 프로젝트</a></li>
-						<li><a href="../../../../../manager/manageProject/complaintProject/complaintProjectMain/view/PCM.html">신고 프로젝트</a></li>
+						<li><a href="../project/newMain.html">신규 신청</a></li>
+						<li><a href="../project/reMain.html">재신청</a></li>
+						<li><a href="../project/declineMain.html">반려 프로젝트</a></li>
+						<li><a href="../project/complaintMain.html">신고 프로젝트</a></li>
 					</ul>
 				</li>
 			</ul>
             <ul class="sideBar-toggle">
 				<li><a href="#">수익관리</a><br>
 					<ul class="sub">
-						<li><a href="../../../../../manager/manageRevenue/projectList/projectListMain/view/RM.html">프로젝트 목록</a></li>
+						<li><a href="../revenue/main.html">프로젝트 목록</a></li>
 					</ul>
 				</li>
 			</ul>
             <ul class="sideBar-toggle">
 				<li><a href="#">게시판 관리</a><br>
 					<ul class="sub">
-						<li><a href="../../../../../manager/manageBoard/ManageNotificationBoard/ManageNotificationBoardMain/view/BNM.html">공지사항</a></li>
-						<li><a href="../../../../../manager/manageBoard/ManageInquiryBoard/ManageInquiryBoardMain/view/BIM.html">고객센터</a></li>
+						<li><a href="../board/noticeMain.html">공지사항</a></li>
+						<li><a href="../board/inquiryMain.html">문의사항</a></li>
+						<li><a href="../board/complaintMain.html">신고 게시판</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -159,7 +159,7 @@
         <div class="middle">
             <!-- 가운데 컨텐츠 -->
             <div class="first">
-                <span><a class="black-link" href="../../searchComplaintMain/view/SCM.html">신고 회원 조회</a></span>
+                <span><a class="black-link" href="./complaintMain.html">경고 회원 조회</a></span>
                 <span><a class="black-link"> > </a></span>
                 <span><a class="black-link" href="./SCD.html">세부 정보</a></span>
             
@@ -168,7 +168,7 @@
             <div class="CRUDcontainer">
         
                 <div>
-                    <a href="#"><img class="logo1" src="../../../../../manager/images/middleLogo.png" alt=""></a>
+                    <a href="#"><img class="logo1" src="../../../resources/images/01_logoimg/textLogoNone.png" alt=""></a>    
                 </div>
                 <div class="CRUD">
 
@@ -373,24 +373,24 @@
 
 
     <footer>
-         <!-- Footer -->
-	 <div class=footer>
-		<div class="footer-back"></div>
-		<div class="footer-left"></div>
-		<div class=footer-group>
-		  <div class=footer-group-design><span  class="footer-down">
-	  일부 상품의 경우 와디즈는 통신판매중개자이며 통신판매 당사자가 아닙니다.
-	  해당되는 상품의 경우 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다. </span>
-			<div class=footer-up><span  class="footer-up-right">이메일 상담   abcdefg@gmail.com
-	  유선 상담 1234-5678</span><span  class="footer-up-left">Cloud Fooding 클라우드 푸딩
-	  사업자 등록번호 1234-56-7890
-	  서울 종로구 인사동길 12 대일빌딩 7층 클라우드 푸딩
-	  </span>
-	</div>
-    <img class="footer-logo" src="../../../../../manager/images/headerLogo.png">
-		  </div>
-		</div>
-	  </div>
-    </footer>
+        <!-- Footer -->
+    <div class=footer>
+       <div class="footer-back"></div>
+       <div class="footer-left"></div>
+       <div class=footer-group>
+         <div class=footer-group-design><span  class="footer-down">
+     일부 상품의 경우 와디즈는 통신판매중개자이며 통신판매 당사자가 아닙니다.
+     해당되는 상품의 경우 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다. </span>
+           <div class=footer-up><span  class="footer-up-right">이메일 상담   abcdefg@gmail.com
+     유선 상담 1234-5678</span><span  class="footer-up-left">Cloud Fooding 클라우드 푸딩
+     사업자 등록번호 1234-56-7890
+     서울 종로구 인사동길 12 대일빌딩 7층 클라우드 푸딩
+     </span>
+   </div>
+   <img class="footer-logo" src="../../../resources/images/01_logoimg/logoNone.png">
+</div>
+       </div>
+     </div>
+   </footer>
 </body>
 </html>

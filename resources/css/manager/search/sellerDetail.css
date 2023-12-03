@@ -17,6 +17,7 @@ li{
     height: auto; /* 높이는 자동으로 조정됩니다. */
     margin-top: 40px;
 }
+
 .black-link,
 .black-link:visited {
     color: black;
@@ -710,7 +711,7 @@ td a{
         position:absolute;
         left:-100px;
         top:40px;
-        background-image:url(./01_logoImage/logoNon.png);
+        background-image:url(/resources/images/01_logoimg/logoNone.png);
         background-repeat:no-repeat;
         background-size:cover;
     }
