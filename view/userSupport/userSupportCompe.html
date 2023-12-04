@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>userSupportComp</title>
     <link rel="stylesheet" href="/resources/css/support/supportComp.css">
-    <link rel="stylesheet" href="../../resources/css/footer/css.css">
+    <link rel="stylesheet" href="/resources/css/footer/css.css">
 </head>
 <body>
     <header>
@@ -51,6 +51,7 @@
             <!-- 검색창 -->
             <div class="search-box">
                 <input type="text" placeholder="검색어를 입력하세요">
+                <img src="/resources/images/lcon/searchicon.avif" alt="돋보기 이미지" class="search-icon" onclick="performSearch()">
                 <i class="fas fa-search"></i>
             </div>
         
@@ -65,8 +66,8 @@
             </div>
         
             <!-- 프로젝트 시작하기 -->
-            <div class="project-button">
-                <a href="#">프로젝트 시작하기</a>
+            <div class="project1-button">
+                <!-- <a href="#">프로젝트 시작하기</a> -->
             </div>     
             </header>
         
@@ -88,7 +89,7 @@
                         <li><a href="#">내정보관리</a><br>
                             <ul class="sub">
                                     <li><a href="#">개인정보 변경</a>
-                                    <li><a href="#">회원탈퇴 </a>
+                                    <li><a href="/view/memberWithdrawal/user/userWithdrawal.html">회원탈퇴 </a>
                                     <li><a href="/view/changePage/sellerPage.html">판매자 전환</a>
                             </ul>
                         </li>
@@ -103,7 +104,8 @@
                     </ul>
                     <li><a href="/view/userQnA/userMainPage/userQnAmainpage.html">QnA</a></li>
                     <li><a href="/view/userDeliver/userMainPage/userDeliverMainPage.html">배송현황</a></li>
-                    <li><a href="#">게시판</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="/view/userSupport/userSupportMain.html">고객센터</a></li>
       
                 </div>
                     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
