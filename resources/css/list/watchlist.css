@@ -446,6 +446,7 @@ body {
 .pagination-box {
     display: flex;
     align-items: center;
+	padding: 30px;
 }
 
 .page-links {

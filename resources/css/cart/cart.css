@@ -138,6 +138,7 @@ body {
     height: 1020px; */
 	display: flex;
 	/* justify-content: space-between; */
+	
 }
 
 .sideBar-con{
@@ -395,6 +396,7 @@ body {
 .pagination-box {
     display: flex;
     align-items: center;
+	padding: 30px;
 }
 
 .page-links {
