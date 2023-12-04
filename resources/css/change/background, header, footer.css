@@ -122,6 +122,8 @@
 			display: flex;
 		}
 
+
+
 		/* 미디어 쿼리: 화면이 작아질 때 */
 		@media screen and (max-width: 600px) {
 			.project-button {
