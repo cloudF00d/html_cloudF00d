@@ -119,6 +119,18 @@
 			display: flex;
 		}
 
+		/* 프로젝트 시작하기  */
+.project1-button {
+    background-color: #333;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 40px;
+    margin-left: auto;
+    display: flex;
+}
+
+
 		/* 미디어 쿼리: 화면이 작아질 때 */
 		@media screen and (max-width: 1200px) {
 			.project-button {
