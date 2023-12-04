@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../resources/css/productPage/productPage.css">
+
+    <link rel="stylesheet" href="/resources/css/header-project/css.css">
+    <!-- <link rel="stylesheet" href="/resources/css/sideBar/css.css"> -->
+    <!-- <link rel="stylesheet" href="/resources/css/memberWithdrawal/user.css"> -->
+    <link rel="stylesheet" href="/resources/css/footer/css.css">
 </head>
 
 
@@ -12,66 +17,51 @@
     
 <!-- 헤더시작 -->
 <header>
-	
+    <img src="/resources/images/01_logoimg/textLogoNone.png" alt="로고" width="100" class="logo-image">
 
-	<!-- 로고 이미지 -->
-	<img src="../../resources/images/textlogonone_2.png" alt="로고" width="100" class="logo-image">
+    <!-- 상단 메뉴 -->
+    <nav>
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">프로젝트</a></li>
+            <li><a href="#">펀딩</a></li>
+            <li><a href="#">도움말</a></li>
+        </ul>
+    </nav>
 
+    <!-- 메뉴 2: 토글 기능 있음 -->
+    <div class="menu-item">
+        <label class="toggle-label" id="toggle-label">더보기</label>
+        <div class="menu-content" id="menu-content">
+            <ul>
+                <li><a href="#">메뉴 항목 1</a></li>
+                <li><a href="#">메뉴 항목 2</a></li>
+                <li><a href="#">메뉴 항목 3</a></li>
+            </ul>
+        </div>
+    </div>
 
-	<!-- 상단 메뉴 -->
-	<nav>
-		<ul>
-			<li><a href="#">홈</a></li>
-			<li><a href="#">프로젝트</a></li>
-			<li><a href="#">펀딩</a></li>
-			<li><a href="#">도움말</a></li>
-		</ul>
-	</nav>
+    <!-- 검색창 -->
+    <div class="search-box">
+        <input type="text" placeholder="검색어를 입력하세요">
+        <img src="/resources/images/돋보기 아이콘.avif" alt="돋보기 이미지" class="search-icon" onclick="performSearch()">
+        </div>
+    </div>
+        
+    <!-- 로그인 회원가입 -->
+    <div class="login-signup">
+        <nav>
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </nav>
+    </div>
 
-	<!-- 상단 - 더보기 메뉴 -->
-	<div class="menu-item">
-		<label class="toggle-label" id="toggle-label">더보기</label>
-		<div class="menu-content" id="menu-content">
-			<ul>
-				<li><a href="#">메뉴 항목 1</a></li>
-				<li><a href="#">메뉴 항목 2</a></li>
-				<li><a href="#">메뉴 항목 3</a></li>
-			</ul>
-		</div>
-	</div>
-
-	<!-- 더보기 토글 제이쿼리 -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-	<!-- 더보기 토글 함수 -->
-	<script>
-		$(document).ready(function () {
-			$('#toggle-label').click(function () {
-				$('#menu-content').slideToggle(500);
-			});
-		});
-	</script>
-
-	<!-- 검색창 -->
-	<div class="search-box">
-		<input type="text" placeholder="검색어를 입력하세요">
-		<i class="fas fa-search"></i>
-	</div>
-
-	<!-- 로그인 회원가입 -->
-	<div class="login-signup">
-		<nav>
-			<ul>
-				<li><a href="#">로그인</a></li>
-				<li><a href="#">회원가입</a></li>
-			</ul>
-		</nav>
-	</div>
-
-	<!-- 프로젝트 시작하기 -->
-	<div class="project-button">
-		<a href="#">프로젝트 시작하기</a>
-	</div>
+    <!-- 프로젝트 시작하기 -->
+    <div class="project-button">
+        <a href="#">프로젝트 시작하기</a>
+    </div>
 </header>
 
 <!-- 헤더끝 -->
@@ -79,8 +69,8 @@
         <div class="main-box">
         
     <div class="story-con">
-        <div class="story">스토리</div><br>
-        <div class="review">구매후기</div>
+        <a href="/view/productPage/productStory.html" class="story">스토리</a><br>
+        <a href="/view/productPage/productPage.html" class="review">구매후기</a>
         
     </div>
     <div class="story-con2">
@@ -96,7 +86,7 @@
             
                 <div class="review-box">
                     <div class="img">
-                    <img src="../../resources/images/checkbtn.PNG" alt="">
+                    <img src="/resources/images/minicon/foodbox.png" alt="">
                       <div class="img-right">김민하</div>
                     </div>
                     <div class="comment-box">
@@ -107,7 +97,7 @@
                 
                 <div class="review-box">
                     <div class="img">
-                    <img src="../../resources/images/checkbtn.PNG" alt="">
+                    <img src="/resources/images/minicon/checkbtn.PNG" alt="">
                       <div class="img-right">김인하</div>
                     </div>
                     <div class="comment-box">
@@ -118,7 +108,7 @@
 
                 <div class="review-box">
                     <div class="img">
-                    <img src="../../resources/images/checkbtn.PNG" alt="">
+                    <img src="/resources/images/minicon/insta.png" alt="">
                       <div class="img-right">김이나</div>
                     </div>
                     <div class="comment-box">
@@ -133,11 +123,11 @@
                 <div class="seller-con">
                     <div class="seller">
                         <div class="img">
-                            <img src="../../resources/images/checkbtn.PNG" alt="">
-                              <div class="img-right">이동락</div>
+                            <img src="/resources/images/minicon/good.png" alt="">
+                              <div class="img-right">주식회사 민하킴</div>
                             </div>
                             <div>
-                                <span><span>홈페이지 : </span><span class="seller-addr">www.naver.com</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <span><span>홈페이지 : </span><span class="seller-addr">http://minha.com/minhaminha</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                             </div>
                     </div>
                 </div>
@@ -148,7 +138,7 @@
                               <div class="guide-title">커뮤니티가이드</div>
                             </div>
                             <div class="pre-con">
-<pre style="">            프로젝트와 무관한 글, 사진, 광고성, 욕설, 비방, 도배 등의 글은 예고 없이 삭제 등 조치가 취해질 수 있습니다. 해당 내용으로
+<pre >            프로젝트와 무관한 글, 사진, 광고성, 욕설, 비방, 도배 등의 글은 예고 없이 삭제 등 조치가 취해질 수 있습니다. 해당 내용으로
             인해 메이커, 서포터, 제3자에게 피해가 발생되지 않도록 유의해 주세요.
 
             삭제가 필요한 글은 info@wadiz.kr 로 신고를 접수해 주세요. 신고 접수 시 반드시 신고인 아이디, 게시물 작성자 아이디, 프
@@ -180,20 +170,53 @@
                 </div>
 
                 <div class="btns-con">
-                    <button class="goodbtn">좋아요숫자</button>
+                    <button class="goodbtn"><div onclick="like('button1')" class="like-button" id="button1">&#10084;</div><span id="likeCount">0</span></button>
                     <button class="buybtn">예약 구매하기</button>
-
+                    <script>
+                        let liked1 = false; // 첫 번째 좋아요 상태를 나타내는 변수
+                        let liked2 = false; // 두 번째 좋아요 상태를 나타내는 변수
+                        let likeCount = 0;   // 좋아요 개수를 저장하는 변수
+                    
+                        function like(buttonId) {
+                            const button1 = document.getElementById('button1');
+                            const button2 = document.getElementById('button2');
+                            const likeCountElement = document.getElementById('likeCount');
+                    
+                            if (buttonId === 'button1') {
+                                liked1 = !liked1;
+                                liked2 = liked1;
+                            } else if (buttonId === 'button2') {
+                                liked2 = !liked2;
+                                liked1 = liked2;
+                            }
+                    
+                            if (liked1 || liked2) {
+                                // 하나 이상의 버튼이 좋아요 상태인 경우
+                                button1.classList.add('liked');
+                                button2.classList.add('liked');
+                                likeCount++;
+                            } else {
+                                // 두 버튼이 모두 좋아요 상태가 아닌 경우
+                                button1.classList.remove('liked');
+                                button2.classList.remove('liked');
+                                likeCount--;
+                            }
+                    
+                            // 좋아요 개수 업데이트
+                            likeCountElement.textContent = likeCount;
+                        }
+                    </script>
                 </div>
                 <div class="businesscard-con">
                     <div class="businesscard">
-                        <img src="../../resources/images/checkbtn.PNG" alt="">
+                        <img src="/resources/images/minicon/good.png" alt="">
                           <div class="businesscard-right">주식회사 민하킴</div>
                         </div>
                         <div class="businesscard-home">홈페이지<div class="addr">http://minha.com/minhaminha</div></div>
                         <div class="business-sns">SNS <img src="/resources/images/insta.png" alt=""></div>
                 </div>
                 <div class="report-con">
-                    <span>프로젝트에 문제가 있나요?<span style="margin-left: 360px;">신고하러가기  ></span></span>
+                    <span>프로젝트에 문제가 있나요?<span style="margin-left: 360px;"><a href="프로젝트신고">신고하러가기  ></a></span></span>
                 </div>
                 <div class="pickkeyword-con">
                     <div class="pickkeyword">리워드 선택</div>
@@ -291,7 +314,8 @@
                     <br>
                 </div>
                 <div class="btns-con">
-                    <button class="goodbtn">좋아요숫자</button>
+                    
+                    <button class="goodbtn"><div onclick="like('button2')" class="like-button" id="button2">&#10084;</div></button>
                     <button class="buybtn">예약 구매하기</button>
 
                 </div>
@@ -324,23 +348,30 @@
 <!-- 푸터는 이아래에 붙여 -->
 
 <!-- 푸터 시작 -->
-<div class=footer>
-    <div class="footer-back"></div>
-    <div class="footer-left"></div>
-    <div class=footer-group>
-      <div class=footer-group-design><span  class="footer-down">
-  일부 상품의 경우 와디즈는 통신판매중개자이며 통신판매 당사자가 아닙니다.
-  해당되는 상품의 경우 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다. </span>
-        <div class=footer-up><span  class="footer-up-right">이메일 상담   abcdefg@gmail.com
-  유선 상담 1234-5678</span><span  class="footer-up-left">Cloud Fooding 클라우드 푸딩
-  사업자 등록번호 1234-56-7890
-  서울 종로구 인사동길 12 대일빌딩 7층 클라우드 푸딩
-  </span>
-</div>
-        <div class="footer-logo"></div>
-      </div>
+<!-- Footer -->
+<div class="footer-container">
+    
+    <div class="footer-logo">               
+        <img src="/resources/images/01_logoimg/logoNone.png" alt="footer-logo" class="footer-logo">
     </div>
-  </div>
+
+    <div class="footer">
+        <div class="footer-back"></div>
+        <div class="footer-left"></div>
+        <div class=footer-group>
+            <div class=footer-group-design><span class="footer-down">
+                일부 상품의 경우 와디즈는 통신판매중개자이며 통신판매 당사자가 아닙니다.
+                    해당되는 상품의 경우 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다. </span>
+                <div class=footer-up><span class="footer-up-right">이메일 상담 abcdefg@gmail.com
+                        유선 상담 1234-5678</span><span class="footer-up-left">Cloud Fooding 클라우드 푸딩
+                        사업자 등록번호 1234-56-7890
+                        서울 종로구 인사동길 12 대일빌딩 7층 클라우드 푸딩
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
   <!-- 푸터끝 -->
     
 
