@@ -11,23 +11,17 @@
  li{
     list-style: none;
  }
- header{
-    width: 1920px;
-    height: 200px;
-    background-color: aquamarine;
- }
- footer{
-    width: 1920px;
-    height: 200px;
-    background-color: aquamarine;
- }
+
  .buyok{
     width: 1920px;
     height: 700px;
     /* border: 1px solid red; */
+    
+    
 }
 .buyokay{
    margin-left: 200px;
+   
 }
 .maininfo {
     width: 1300px;
@@ -42,6 +36,7 @@
     justify-content: center; /* 수평 가운데 정렬 */
     align-items: center;
      /* 수직 가운데 정렬 */
+     
 }
 
 .payment-confirmation {
