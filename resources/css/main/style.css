@@ -14,14 +14,12 @@ body {
 }
 
 /* SECTION */
-section {
     section {
         width: 100%;
         height: 100vh;
         /* 뷰포트 높이를 100%로 설정 */
         background: #fff;
     }
-}
 
 /* ARTICLE */
 article {
@@ -259,7 +257,7 @@ article {
 }
 
 .first-square-icon {
-    width: 100%;
+    width: 100%;   
     height: 100%;
     border-radius: 5%;
 }
@@ -276,6 +274,7 @@ article {
     margin-bottom: 3%
 }
 
+/* 신규 리펀딩 */
 .second-square-icon-container {
     display: flex;
     margin-left: 5%;

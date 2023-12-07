@@ -26,7 +26,6 @@ header {
     position: relative;
 }
 
-
 /* logo - margin  */
 .logo-image {
     margin-right: auto;
@@ -39,6 +38,7 @@ nav {
     text-align: center;
     min-width: 60px;
     min-height: 20px;
+    margin-left: 50px;
 }
 
 /* 네비게이션 메뉴 목록 */
@@ -51,7 +51,7 @@ nav ul {
 
 /* 네비게이션 메뉴 항목 스타일 */
 nav ul li {
-    margin: 0 15px;
+    margin: 0 50px;
     min-width: 60px;
     min-height: 20px;
     display: flex;
@@ -83,6 +83,7 @@ nav ul li a {
     align-items: center;
     width: 200px;
     margin-right: auto;
+    margin-left: auto;
 }
 
 /* 검색어 - 자식 (입력 필드) */
@@ -140,7 +141,6 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     text-align: center;
-    width: 135px;
 }
 
 .toggle-label {
