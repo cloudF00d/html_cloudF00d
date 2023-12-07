@@ -148,7 +148,20 @@
 
                 <div class="category-text">카테고리<span class="greeting-text-star"> *</span></div>
                 <div class="category-sub-text">프로젝트와 가장 잘 어울리는 카테고리를 선택해 주세요. 프로젝트를 만들고 바꿀 수 있어요.</div><br><br>
+                    <!-- 드롭다운 버튼 -->
+                    <button class="dropdown-btn" onclick="toggleDropdown()">카테고리 선택</button>
+                    <br><br>
 
+                    <!-- 드롭다운 콘텐츠 -->
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="#" onclick="selectCategory('카테고리1')">카테고리 1</a>
+                        <a href="#" onclick="selectCategory('카테고리2')">카테고리 2</a>
+                        <a href="#" onclick="selectCategory('카테고리3')">카테고리 3</a>
+                    </div>
+                    
+
+                    <div class="category-text">프로젝트 유형<span class="greeting-text-star"> *</span></div>
+                    <br>
                 <!-- 체크박스 -->
                 <div class="checkbox-list">
                     <label>
@@ -158,13 +171,9 @@
 
                     <label>
                         <input type="checkbox" name="checkbox2" value="value2">
-                        <strong>리펀딩</strong>&nbsp;클라우드푸딩에서 성공한 프로젝트를 다시 공개해요.<br><br>
+                        <strong>리펀딩</strong>&nbsp;클라우드푸딩에서 성공한 프로젝트를 다시 공개해요.
                     </label>
-
-                    <label>
-                        <input type="checkbox" name="checkbox3" value="value3">
-                        <strong>모의펀딩</strong>&nbsp;펀딩을 하기 전 제시한 상품의 성공 가능성을 체크해요.<br><br>
-                    </label>
+                <br><br><br>
                 </div> <!-- 체크박스 -->
 
                 <!-- 대표자 정보 -->
@@ -194,7 +203,7 @@
                     </div>
                 </div> <!-- owner-container -->
 
-                <br><br>
+                <br><br><br>
                 <div class="category-text">심사 서류<span class="greeting-text-star"> *</span></div><br>
                 <div class="paper-box-container">
                     <div class="paper-box" onclick="openFileAttachmentPopup()">

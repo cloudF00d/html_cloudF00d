@@ -68,6 +68,42 @@ label strong {
     margin-left: 10vh;
 }
 
+/* 카테고리 선택 드롭다운 */
+ .dropdown-btn {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #b9b9b9;
+    cursor: pointer;
+    margin-left: 10vh;
+    border-radius: 10px;
+    width: 300px;
+    background-color: #fff;
+}
+
+/* 드롭다운 콘텐츠 숨김 */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: 10vh;
+    width: 300px;
+}
+
+/* 드롭다운 콘텐츠 링크 스타일링 */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+/* 드롭다운 콘텐츠 링크 호버 효과 */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
 /* 이메일 입력창 */
 .ownerInfo {
     width: 200px;
